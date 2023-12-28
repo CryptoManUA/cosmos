@@ -5,7 +5,7 @@ function logo() {
 }
 
 function port_menu() {
-    bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/test/main/port_menu.sh?token=GHSAT0AAAAAACLEO27OPPJIXQEG2ZNF676UZMMEA4A)
+    bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/port_menu.sh)
 }
  
  function create_validator_Lava () {
