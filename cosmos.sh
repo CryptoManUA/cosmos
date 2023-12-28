@@ -10,7 +10,7 @@ function port_menu() {
 }
 
  function create_validater () {
- 	bash <(https://raw.githubusercontent.com/CryptoManUA/cosmos/main/create_validator.sh)
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/create_validator.sh)
  function create_validator_Lava () {
 		clear
 		logo
