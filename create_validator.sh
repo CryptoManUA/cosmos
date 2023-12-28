@@ -191,4 +191,4 @@ babylond tx checkpointing create-validator \
         read -p "Натисніть Enter, щоб повернутись до головного меню..."
     done
 }
-		main_menu
+		node_menu
