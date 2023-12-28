@@ -156,7 +156,7 @@ babylond tx checkpointing create-validator \
 
 }
 
-	function node_menu() {
+	function main_menu() {
     while true; do
         clear
         logo
@@ -190,4 +190,6 @@ babylond tx checkpointing create-validator \
         esac
         read -p "Натисніть Enter, щоб повернутись до головного меню..."
     done
+    
 }
+	main_menu
