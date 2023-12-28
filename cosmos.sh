@@ -12,8 +12,10 @@ function port_menu() {
 		clear
 		logo
 		echo -e "\e[1m\e[35mСтворення валідатора Lava\e[0m"
+  echo "Вкажіть кількість токенів:"
+	read AMOUNT
 echo "Вкажіть ім'я вашого moniker:"
-read MONIKER
+	read MONIKER
 
 	DEFAULT_IDENTITY="779712C94C077F16"
 
@@ -26,11 +28,12 @@ if [ -n "$IDENTITY_INPUT" ]; then
   IDENTITY="779712C94C077F16"
 fi
 lavad tx staking create-validator \
---amount=10000ulava \
+--amount="$AMOUNT"ulava \
 --pubkey=$(lavad tendermint show-validator) \
 --moniker="$MONIKER" \
 --identity="$IDENTITY" \
 --details="CPI™️ Ukranian Community" \
+--website=https://cpi-tm.com/
 --chain-id=lava-testnet-2 \
 --commission-rate=0.10 \
 --commission-max-rate=0.20 \
