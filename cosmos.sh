@@ -73,7 +73,7 @@ dymd tx staking create-validator \
 --commission-max-change-rate=0.01 \
 --min-self-delegation=1 \
 --from=wallet \
---gas-prices=0.1ulava \
+--gas-prices=0.1udym \
 --gas-adjustment=1.5 \
 --gas=auto \
 -y
