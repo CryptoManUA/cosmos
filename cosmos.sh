@@ -22,8 +22,8 @@ function main_menu() {
         echo -e "\e[1m\e[33m1\e[0m - Створити валідатора"
         echo -e "\e[1m\e[33m2\e[0m - Редагувати валідатора"
         echo -e "\e[1m\e[33m3\e[0m - Переглянути порти"
-		echo -e "\e[1m\e[33m4\e[0m - Заміна портів"
-		echo -e "\e[1m\e[33m5\e[0m - Вийти"
+	echo -e "\e[1m\e[33m4\e[0m - Заміна портів"
+	echo -e "\e[1m\e[33m5\e[0m - Вийти"
         read -p "Зробіть ваш вибір, та введіть число: " choice
         case "$choice" in
             1)
@@ -33,12 +33,12 @@ function main_menu() {
                 edit_validator
                 ;;
             3)
-				clear
-				netstat -tuln
+		clear
+		netstat -tuln
                 ;;
-			4)
-				port_menu
-				;;
+	    4)
+		port_menu
+		;;
             5)
                 echo "Ви вийшли з меню."
                 break
