@@ -160,7 +160,7 @@ babylond tx checkpointing create-validator \
     while true; do
         clear
         logo
-        echo -e "\e[1m\e[35mВиберіть ноду для заміни портів:"
+        echo -e "\e[1m\e[35mВиберіть ноду для створення валідатора:"
         echo -e "\e[1m\e[33m1\e[0m - Lava"
         echo -e "\e[1m\e[33m2\e[0m - Dymension"
         echo -e "\e[1m\e[33m3\e[0m - Zetachain"
@@ -191,4 +191,3 @@ babylond tx checkpointing create-validator \
         read -p "Натисніть Enter, щоб повернутись до головного меню..."
     done
 }
-		node_menu
