@@ -13,7 +13,10 @@ function port_menu() {
  	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/create_validator.sh)
 }
 
-	
+ function edit_validator() {
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/edit_validator.sh)
+}
+ 
 function main_menu() {
     while true; do
         clear
