@@ -23,7 +23,7 @@ read IDENTITY_INPUT
 if [ -n "$IDENTITY_INPUT" ]; then
   IDENTITY="$IDENTITY_INPUT"
   else
-  IDENTITY="DEFAULT_IDENTITY"
+  IDENTITY="779712C94C077F16"
 fi
 lavad tx staking create-validator \
 --amount=10000ulava \
