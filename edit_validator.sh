@@ -23,7 +23,7 @@ if [ -n "$IDENTITY_INPUT" ]; then
 fi
 
 lavad tx staking create-validator \
---new-moniker="$MONIKER" \
+--moniker="$MONIKER" \
 --identity="$IDENTITY" \
 --details="CPI™️ Ukranian Community" \
 --chain-id=lava-testnet-2 \
