@@ -54,7 +54,6 @@ if [ -n "$IDENTITY_INPUT" ]; then
   IDENTITY="779712C94C077F16"
 fi
 dymd tx staking edit-validator \
---pubkey=$(dymd tendermint show-validator) \
 --new-moniker="$MONIKER" \
 --identity="$IDENTITY" \
 --details="CPI™️ Ukranian Community" \
@@ -86,7 +85,6 @@ if [ -n "$IDENTITY_INPUT" ]; then
   IDENTITY="779712C94C077F16"
 fi
 zetacored tx staking edit-validator \
---pubkey=$(zetacored tendermint show-validator) \
 --new-moniker="$MONIKER" \
 --identity="$IDENTITY" \
 --details="CPI™️ Ukranian Community" \
@@ -118,7 +116,6 @@ if [ -n "$IDENTITY_INPUT" ]; then
   IDENTITY="779712C94C077F16"
 fi
 babylond tx checkpointing edit-validator \
---pubkey=$(dymd tendermint show-validator) \
 --new-moniker="$MONIKER" \
 --identity="$IDENTITY" \
 --details="CPI™️ Ukranian Community" \
