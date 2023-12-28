@@ -23,6 +23,7 @@ if [ -n "$IDENTITY_INPUT" ]; then
   else
   IDENTITY="779712C94C077F16"
 fi
+
 lavad tx staking create-validator \
 --amount="$AMOUNT"ulava \
 --pubkey=$(lavad tendermint show-validator) \
@@ -101,7 +102,7 @@ if [ -n "$IDENTITY_INPUT" ]; then
 fi
 zetacored tx staking create-validator \
 --amount="$AMOUNT"azeta \
---pubkey=$(dymd tendermint show-validator) \
+--pubkey=$(zetacored tendermint show-validator) \
 --moniker="$MONIKER" \
 --identity="$IDENTITY" \
 --details="CPI™️ Ukranian Community" \
