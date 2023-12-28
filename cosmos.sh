@@ -8,6 +8,9 @@ function port_menu() {
 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/port_menu.sh)
 
 }
+
+ function create_validater () {
+ 	bash <(https://raw.githubusercontent.com/CryptoManUA/cosmos/main/create_validator.sh)
  function create_validator_Lava () {
 		clear
 		logo
@@ -129,7 +132,7 @@ function main_menu() {
         read -p "Зробіть ваш вибір, та введіть число: " choice
         case "$choice" in
             1)
-                node_create_validator
+                create_validator
                 ;;
             2)
                 edit_validator
