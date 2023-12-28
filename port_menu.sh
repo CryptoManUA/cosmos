@@ -11,9 +11,9 @@ function port_menu1() {
         echo -e "\e[1m\e[33m0\e[0m  - 26657 Default"
         echo -e "\e[1m\e[33m1\e[0m  - 27657"
         echo -e "\e[1m\e[33m2\e[0m  - 28657"
-	echo -e "\e[1m\e[33m3\e[0m  - 29657"
-	echo -e "\e[1m\e[33m4\e[0m  - 30657"
-	echo -e "\e[1m\e[33m5\e[0m  - 31657"
+		echo -e "\e[1m\e[33m3\e[0m  - 29657"
+		echo -e "\e[1m\e[33m4\e[0m  - 30657"
+		echo -e "\e[1m\e[33m5\e[0m  - 31657"
     	echo -e "\e[1m\e[33m6\e[0m  - 32657"
      	echo -e "\e[1m\e[33m7\e[0m  - 33657"
       	echo -e "\e[1m\e[33m8\e[0m  - 34657"
@@ -125,9 +125,9 @@ function port_menu2() {
         echo -e "\e[1m\e[33m0\e[0m  - 26657 Default"
         echo -e "\e[1m\e[33m1\e[0m  - 27657"
         echo -e "\e[1m\e[33m2\e[0m  - 28657"
- 	echo -e "\e[1m\e[33m3\e[0m  - 29657"
-	echo -e "\e[1m\e[33m4\e[0m  - 30657"
-  	echo -e "\e[1m\e[33m5\e[0m  - 31657"
+		echo -e "\e[1m\e[33m3\e[0m  - 29657"
+		echo -e "\e[1m\e[33m4\e[0m  - 30657"
+		echo -e "\e[1m\e[33m5\e[0m  - 31657"
     	echo -e "\e[1m\e[33m6\e[0m  - 32657"
      	echo -e "\e[1m\e[33m7\e[0m  - 33657"
       	echo -e "\e[1m\e[33m8\e[0m  - 34657"
@@ -136,7 +136,15 @@ function port_menu2() {
         read -p "Ваш вибір від 0 до 10: " choice
         case "$choice" in
             0)
-        
+wget -P /root/.dymension/config/ -N \
+	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Dymension/app.toml
+wget -P /root/.dymension/config/ -N \
+ 	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Dymension/client.toml
+wget -P /root/.dymension/config/ -N \
+  	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Dymension/config.toml
+sudo systemctl restart dymd
+echo -e "\e[1m\e[32mПорт замінено та перезавантажено ноду\e[0m" && sleep 1
+echo -e "\e[1m\e[32mПеревірте роботу ноди\e[0m"
                 ;;
              1)
 sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:27658\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:27657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:6160\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":27660\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:27657\"%" $HOME/.dymension/config/config.toml &&
@@ -242,7 +250,15 @@ function port_menu3() {
 		read -p "Ваш вибір від 0 до 10: " choice
 		case "$choice" in
             0)
-                
+wget -P /root/.zetacored/config/ -N \
+	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/ZetaChain/app.toml
+wget -P /root/.zetacored/config/ -N \
+ 	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/ZetaChain/client.toml
+wget -P /root/.zetacored/config/ -N \
+  	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/ZetaChain/config.toml
+sudo systemctl restart zetacored 
+echo -e "\e[1m\e[32mПорт замінено та перезавантажено ноду\e[0m" && sleep 1
+echo -e "\e[1m\e[32mПеревірте роботу ноди\e[0m"              
                 ;;
             1)
 sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:27658\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:27657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:6160\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":27660\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:27657\"%" $HOME/.zetacored/config/config.toml &&
@@ -348,7 +364,15 @@ function port_menu4() {
 		read -p "Ваш вибір від 0 до 10: " choice
 		case "$choice" in
             0)
-                
+wget -P /root/.babylond/config/ -N \
+	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Babylon/app.toml
+wget -P /root/.babylond/config/ -N \
+ 	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Babylon/client.toml
+wget -P /root/.babylond/config/ -N \
+  	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Babylon/config.toml
+sudo systemctl restart babylond    
+echo -e "\e[1m\e[32mПорт замінено та перезавантажено ноду\e[0m" && sleep 1
+echo -e "\e[1m\e[32mПеревірте роботу ноди\e[0m"            
                 ;;
              	1)
 sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:27658\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:27657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:6160\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":27660\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:27657\"%" $HOME/.babylond/config/config.toml &&
@@ -463,7 +487,7 @@ function main_menu() {
                 ;;
 			5)
                 clear
-				netstat -tuln
+		netstat -tuln
                 ;;
             6)
                 echo "Ви вийшли з меню."
