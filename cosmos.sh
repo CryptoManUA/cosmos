@@ -49,6 +49,8 @@ lavad tx staking create-validator \
 		clear
 		logo
 		echo -e "\e[1m\e[35mСтворення валідатора Lava\e[0m"
+  echo "Вкажіть кількість токенів:"
+	read AMOUNT
 echo "Вкажіть ім'я вашого moniker:"
 read MONIKER
 
@@ -63,7 +65,7 @@ if [ -n "$IDENTITY_INPUT" ]; then
   IDENTITY="779712C94C077F16"
 fi
 dymd tx staking create-validator \
---amount=100000000000000000000udym \
+--amount="$AMOUNT"udym \
 --pubkey=$(dymd tendermint show-validator) \
 --moniker="$MONIKER" \
 --identity="$IDENTITY" \
