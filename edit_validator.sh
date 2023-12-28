@@ -8,8 +8,6 @@ function edit_lava () {
 		clear
 		logo
 		echo -e "\e[1m\e[35mСтворення валідатора Lava\e[0m"
-  echo "Вкажіть кількість токенів:"
-	read AMOUNT
   echo "Вкажіть ім'я вашого moniker:"
 	read MONIKER
 
@@ -25,7 +23,6 @@ if [ -n "$IDENTITY_INPUT" ]; then
 fi
 
 lavad tx staking create-validator \
---amount="$AMOUNT"ulava \
 --new-moniker="$MONIKER" \
 --identity="$IDENTITY" \
 --details="CPI™️ Ukranian Community" \
@@ -43,8 +40,6 @@ function edit_dymension () {
 		clear
 		logo
 		echo -e "\e[1m\e[35mСтворення валідатора Dymension\e[0m"
-  echo "Вкажіть кількість токенів:"
-	read AMOUNT
 echo "Вкажіть ім'я вашого moniker:"
 read MONIKER
 
@@ -59,7 +54,6 @@ if [ -n "$IDENTITY_INPUT" ]; then
   IDENTITY="779712C94C077F16"
 fi
 dymd tx staking edit-validator \
---amount="$AMOUNT"udym \
 --pubkey=$(dymd tendermint show-validator) \
 --new-moniker="$MONIKER" \
 --identity="$IDENTITY" \
@@ -78,8 +72,6 @@ function edit_zetachain () {
 		clear
 		logo
 		echo -e "\e[1m\e[35mСтворення валідатора ZetaChain\e[0m"
-  echo "Вкажіть кількість токенів:"
-	read AMOUNT
 echo "Вкажіть ім'я вашого moniker:"
 read MONIKER
 
@@ -94,7 +86,6 @@ if [ -n "$IDENTITY_INPUT" ]; then
   IDENTITY="779712C94C077F16"
 fi
 zetacored tx staking edit-validator \
---amount="$AMOUNT"azeta \
 --pubkey=$(zetacored tendermint show-validator) \
 --new-moniker="$MONIKER" \
 --identity="$IDENTITY" \
@@ -113,8 +104,6 @@ function edit_babylon () {
 		clear
 		logo
 		echo -e "\e[1m\e[35mСтворення валідатора Babylon\e[0m"
-  echo "Вкажіть кількість токенів:"
-	read AMOUNT
 echo "Вкажіть ім'я вашого moniker:"
 read MONIKER
 
@@ -129,7 +118,6 @@ if [ -n "$IDENTITY_INPUT" ]; then
   IDENTITY="779712C94C077F16"
 fi
 babylond tx checkpointing edit-validator \
---amount="$AMOUNT"ubbn \
 --pubkey=$(dymd tendermint show-validator) \
 --new-moniker="$MONIKER" \
 --identity="$IDENTITY" \
