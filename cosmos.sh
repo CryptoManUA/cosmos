@@ -39,6 +39,7 @@ lavad tx staking create-validator \
 --from=wallet \
 --gas-prices=0.1ulava \
 --gas-adjustment=1.5 \
+--gas=auto \
 -y
 
 }
