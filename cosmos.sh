@@ -5,9 +5,9 @@ function logo() {
 }
 
 function port_menu() {
-    bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/port_menu.sh)
+	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/port_menu.sh)
+
 }
- 
  function create_validator_Lava () {
 		clear
 		logo
@@ -43,7 +43,6 @@ lavad tx staking create-validator \
 -y
 
 }
-
  function create_validator_Dymension () {
 		clear
 		logo
