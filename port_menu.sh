@@ -28,6 +28,9 @@ wget -P /root/.lava/config/ -N \
  	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Lava/client.toml
 wget -P /root/.lava/config/ -N \
   	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Lava/config.toml
+sudo systemctl restart lavad
+echo -e "\e[1m\e[32mПорт замінено та перезавантажено ноду\e[0m" && sleep 1
+echo -e "\e[1m\e[32mПеревірте роботу ноди\e[0m"
                 ;;
             	1)
 sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:27658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:27657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:6160\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":27660\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:27657\"%" $HOME/.lava/config/config.toml &&
