@@ -26,7 +26,7 @@ if [ -n "$IDENTITY_INPUT" ]; then
   IDENTITY="DEFAULT_IDENTITY"
 fi
 lavad tx staking create-validator \
---amount=1000000ulava \
+--amount=10000ulava \
 --pubkey=$(lavad tendermint show-validator) \
 --moniker="$MONIKER" \
 --identity="$IDENTITY" \
