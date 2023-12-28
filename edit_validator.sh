@@ -115,7 +115,7 @@ if [ -n "$IDENTITY_INPUT" ]; then
   else
   IDENTITY="779712C94C077F16"
 fi
-babylond tx checkpointing edit-validator \
+babylond tx staking edit-validator \
 --new-moniker="$MONIKER" \
 --identity="$IDENTITY" \
 --details="CPI™️ Ukranian Community" \
