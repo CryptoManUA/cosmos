@@ -24,7 +24,9 @@ function port_menu1() {
             0)
 wget -P /root/.lava/config/ -N \
 	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Lava/app.toml
+wget -P /root/.lava/config/ -N \
  	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Lava/client.toml
+wget -P /root/.lava/config/ -N \
   	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Lava/config.toml
                 ;;
             	1)
