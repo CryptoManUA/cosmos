@@ -62,7 +62,7 @@ if [ -n "$IDENTITY_INPUT" ]; then
   IDENTITY="779712C94C077F16"
 fi
 dymd tx staking create-validator \
---amount=10000udym \
+--amount=100000000000000000000"udym \
 --pubkey=$(dymd tendermint show-validator) \
 --moniker="$MONIKER" \
 --identity="$IDENTITY" \
