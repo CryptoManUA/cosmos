@@ -7,7 +7,7 @@ function logo() {
 function edit_lava () {
 		clear
 		logo
-		echo -e "\e[1m\e[35mСтворення валідатора Lava\e[0m"
+		echo -e "\e[1m\e[35mРедагування валідатора Lava\e[0m"
   echo "Вкажіть ім'я вашого moniker:"
 	read MONIKER
 
@@ -39,7 +39,7 @@ lavad tx staking create-validator \
 function edit_dymension () {
 		clear
 		logo
-		echo -e "\e[1m\e[35mСтворення валідатора Dymension\e[0m"
+		echo -e "\e[1m\e[35mРедагування валідатора Dymension\e[0m"
 echo "Вкажіть ім'я вашого moniker:"
 read MONIKER
 
@@ -71,7 +71,7 @@ dymd tx staking edit-validator \
 function edit_zetachain () {
 		clear
 		logo
-		echo -e "\e[1m\e[35mСтворення валідатора ZetaChain\e[0m"
+		echo -e "\e[1m\e[35mРедагування валідатора ZetaChain\e[0m"
 echo "Вкажіть ім'я вашого moniker:"
 read MONIKER
 
@@ -103,7 +103,7 @@ zetacored tx staking edit-validator \
 function edit_babylon () {
 		clear
 		logo
-		echo -e "\e[1m\e[35mСтворення валідатора Babylon\e[0m"
+		echo -e "\e[1m\e[35mРедагування валідатора Babylon\e[0m"
 echo "Вкажіть ім'я вашого moniker:"
 read MONIKER
 
@@ -136,7 +136,7 @@ babylond tx checkpointing edit-validator \
     while true; do
         clear
         logo
-        echo -e "\e[1m\e[35mВиберіть ноду для створення валідатора:"
+        echo -e "\e[1m\e[35mВиберіть ноду для редагування валідатора:"
         echo -e "\e[1m\e[33m1\e[0m - Lava"
         echo -e "\e[1m\e[33m2\e[0m - Dymension"
         echo -e "\e[1m\e[33m3\e[0m - Zetachain"
