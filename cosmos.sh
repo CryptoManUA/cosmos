@@ -33,7 +33,7 @@ lavad tx staking create-validator \
 --moniker="$MONIKER" \
 --identity="$IDENTITY" \
 --details="CPI™️ Ukranian Community" \
---website=https://cpi-tm.com/
+--website=https://cpi-tm.com/ \
 --chain-id=lava-testnet-2 \
 --commission-rate=0.10 \
 --commission-max-rate=0.20 \
