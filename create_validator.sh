@@ -157,7 +157,7 @@ babylond tx checkpointing create-validator \
 
 }
 
-	function main_menu() {
+	function node_menu() {
     while true; do
         clear
         logo
@@ -193,4 +193,4 @@ babylond tx checkpointing create-validator \
     done
     
 }
-	main_menu
+	node_menu
