@@ -22,8 +22,8 @@ if [ -n "$IDENTITY_INPUT" ]; then
   IDENTITY="779712C94C077F16"
 fi
 
-lavad tx staking create-validator \
---moniker="$MONIKER" \
+lavad tx staking edit-validator \
+--new-moniker="$MONIKER" \
 --identity="$IDENTITY" \
 --details="CPI™️ Ukranian Community" \
 --chain-id=lava-testnet-2 \
