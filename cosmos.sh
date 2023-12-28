@@ -44,7 +44,41 @@ lavad tx staking create-validator \
 
 }
 
- 
+ function create_validator_Dymension () {
+		clear
+		logo
+		echo -e "\e[1m\e[35mСтворення валідатора Lava\e[0m"
+echo "Вкажіть ім'я вашого moniker:"
+read MONIKER
+
+	DEFAULT_IDENTITY="779712C94C077F16"
+
+echo "Вкажіть ваш identity (натисніть Enter якщо ви не створювали):"
+read IDENTITY_INPUT
+
+if [ -n "$IDENTITY_INPUT" ]; then
+  IDENTITY="$IDENTITY_INPUT"
+  else
+  IDENTITY="779712C94C077F16"
+fi
+dymd tx staking create-validator \
+--amount=10000udym \
+--pubkey=$(dymd tendermint show-validator) \
+--moniker="$MONIKER" \
+--identity="$IDENTITY" \
+--details="CPI™️ Ukranian Community" \
+--chain-id=froopyland_100-1 \
+--commission-rate=0.10 \
+--commission-max-rate=0.20 \
+--commission-max-change-rate=0.01 \
+--min-self-delegation=1 \
+--from=wallet \
+--gas-prices=0.1ulava \
+--gas-adjustment=1.5 \
+--gas=auto \
+-y
+
+} 
 
  
  function node_create_validator() {
