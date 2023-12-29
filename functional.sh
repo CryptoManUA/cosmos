@@ -36,9 +36,9 @@ function check {
             echo ""
         elif [[ $choice == "3" ]]; then
             echo ""
-            printGreen "Дізнатись версію ноди:"
+            printGreen "Дізнатись верхній блок вашої ноди:"
             echo ""
-            lavad version --long | grep -e version -e commit
+            lavad status 2>&1 | jq .SyncInfo.latest_block_height
             echo ""
         elif [[ $choice == "4" ]]; then
             echo ""
