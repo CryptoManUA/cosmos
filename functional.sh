@@ -22,7 +22,6 @@ function check {
         echo "7) Рестарт ноди"
         echo "8) Вийти з меню"
         read choice
-[15:22]
 if [[ $choice == "1" ]]; then
             echo ""
             printGreen "Журнал логів Lava. Натисніть CTRL+C щоб вийти."
