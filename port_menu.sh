@@ -11,14 +11,14 @@ function port_menu1() {
         echo -e "\e[1m\e[33m0\e[0m  - 26657 Default"
         echo -e "\e[1m\e[33m1\e[0m  - 27657"
         echo -e "\e[1m\e[33m2\e[0m  - 28657"
-		echo -e "\e[1m\e[33m3\e[0m  - 29657"
-		echo -e "\e[1m\e[33m4\e[0m  - 30657"
-		echo -e "\e[1m\e[33m5\e[0m  - 31657"
+	echo -e "\e[1m\e[33m3\e[0m  - 29657"
+	echo -e "\e[1m\e[33m4\e[0m  - 30657"
+	echo -e "\e[1m\e[33m5\e[0m  - 31657"
     	echo -e "\e[1m\e[33m6\e[0m  - 32657"
      	echo -e "\e[1m\e[33m7\e[0m  - 33657"
       	echo -e "\e[1m\e[33m8\e[0m  - 34657"
         echo -e "\e[1m\e[33m9\e[0m  - 35657"
-		echo -e "\e[1m\e[33m10\e[0m - 36657"
+	echo -e "\e[1m\e[33m10\e[0m - 36657"
         read -p "Ваш вибір від 0 до 10: " choice
         case "$choice" in
             0)
@@ -469,8 +469,8 @@ function main_menu() {
         echo -e "\e[1m\e[33m2\e[0m - Dymension"
         echo -e "\e[1m\e[33m3\e[0m - Zetachain"
         echo -e "\e[1m\e[33m4\e[0m - Babylon"
-		echo -e "\e[1m\e[33m5\e[0m - Переглянути порти"
-		echo -e "\e[1m\e[33m6\e[0m - Вийти"
+	echo -e "\e[1m\e[33m5\e[0m - Переглянути порти"
+	echo -e "\e[1m\e[33m6\e[0m - Вийти"
         read -p "Зробіть ваш вибір, та введіть число: " choice
         case "$choice" in
             1)
