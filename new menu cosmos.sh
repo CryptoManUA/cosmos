@@ -163,7 +163,7 @@ function main_menu {
             echo ""
 			printGreen "↓ Заміна портів ↓"
             echo ""
-            port_menu
+            port_Lava
             echo ""	
 			;;
 		17)
