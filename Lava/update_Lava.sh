@@ -1,5 +1,9 @@
 #!/bin/bash
 
+function logo() {
+	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/logo.sh)
+}	
+
 function printDelimiter {
   echo "==========================================="
 }
@@ -10,7 +14,7 @@ function printGreen {
 
 function update() {
   clear
-  bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/logo.sh)
+  logo
   echo ""
   sudo systemctl stop lavad
 
