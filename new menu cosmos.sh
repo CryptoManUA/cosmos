@@ -57,23 +57,147 @@ function main_menu {
 		echo -e "\e[1m\e[35m[18]\e[0m - Стоп ноди"
 		echo -e "\e[1m\e[35m[19]\e[0m - Рестарт ноди"
 		echo -e "\e[1m\e[35m[20]\e[0m - Вийти з меню"
-		read -p "Введіть номер пункту ► " choiсe
-		case "$choice" in 
+		read -p "Зробіть ваш вибір, та введіть номер пункту ► " choice
+        case "$choice" in 
 		1)
 			printGreen "↓ Встановлення ноди Lava ↓"
-			
             install_Lava
             ;;
-		2)
-			printGreen "↓ Оновлення ноди Lava ↓"
+        2)
+            printGreen "↓ Оновлення ноди Lava ↓"
+            echo ""
             update_Lava
-            ;;	
-		*)	
+            echo ""
+			;;
+		3)
+			printGreen "↓ Видалення ноди Lava ↓"
 			echo ""
+			sudo systemctl stop lavad; sudo systemctl disable lavad; sudo rm -rf $HOME/.lava; sudo rm -rf $HOME/lavad; sudo rm -rf /etc/systemd/system/lavad.service; sudo rm -rf /usr/local/bin/lavad; sudo systemctl daemon-reload		
+			echo ""
+			;;
+		4)
+            echo ""
+            printGreen "↓ Створення гаманця ↓"
+            echo ""
+            lavad keys add wallet
+            echo ""	
+			;;
+		5)
+            echo ""
+            printGreen "↓ Відновлення гаманця ↓"
+            echo ""
+			lavad keys add wallet --recover
+            echo ""	
+			;;
+		6)
+            echo ""
+            printGreen "↓ Створення валідатора ↓"
+            echo ""
+            create_validator
+            echo ""	
+			;;
+		7)
+            echo ""
+            printGreen "↓ Редагування валідатора ↓"
+            echo ""
+            edit_validator
+            echo ""
+			;;
+		8)
+            echo ""
+            printGreen "↓ Інформація про гаманець та баланс ↓"
+            echo ""
+            lavad keys list; lavad q bank balances $(lavad keys show wallet -a)
+            echo ""
+			;;
+		9)
+            echo ""
+            printGreen "↓ Делегування токенів собі ↓"
+            echo ""
+            lavad tx staking delegate $(lavad keys show wallet --bech val -a) 1000000000000ulava --from wallet --chain-id lava-testnet-2 --gas-prices 0.1ulava --gas-adjustment 1.5 --gas auto -y 
+            echo ""
+			;;
+		10)
+            echo ""
+            printGreen "↓ Виведення Вашого валідатора із в'язниці ↓"
+            echo ""
+            sudo journalctl -u lavad -f -o cat
+            echo ""
+			;;			
+		11)
+            echo ""
+            printGreen "↓ Інформаціця про валідатора ↓"
+            echo ""
+            lavad q staking validator $(lavad keys show wallet --bech val -a)
+            echo ""
+			;;	
+		12)
+            echo ""
+            printGreen "↓ Журнал логів Lava↓ Натисніть CTRL+C щоб вийти ↓"
+            echo ""
+            sudo journalctl -u lavad -f -o cat
+            echo ""
+			;;
+		13)
+            echo ""
+            printGreen "↓ Статус ноди та синхронізація ↓"
+            echo ""
+            lavad status 2>&1 | jq; systemctl status lavad
+            echo ""	
+			;;
+		14)
+            echo ""
+            printGreen "↓ Верхній блок вашої ноди ↓"
+            echo ""
+			lavad status 2>&1 | jq .SyncInfo.latest_block_height
+            echo ""	
+			;;
+		15)
+            echo ""
+            printGreen "↓ Ваша версії ноди ↓"
+            echo ""
+            lavad status | jq .NodeInfo.version| tr -d '"' && sleep 3
+            echo "" 
+			;;
+		16)
+            echo ""
+			printGreen "↓ Заміна портів ↓"
+            echo ""
+            port_menu
+            echo ""	
+			;;
+		17)
+            echo ""
+            print "Запуск ноди Lava"
+            echo ""
+            sudo systemctl start lavad
+            echo ""	
+			;;
+		18)
+            echo ""
+            print "Зупинка ноди Lava"
+            echo ""
+            sudo systemctl stop lavad
+            echo ""
+			;;
+		19)
+            echo ""
+            print "Перезавантаження ноди Lava"
+            echo ""
+            sudo systemctl restart lavad
+            echo ""	
+			;;
+		20)
+			echo "Ви вийшли з меню." 
+            break
+            ;;
+		*)	
+			echo
 			printRed "Неправильно вказаний пункт, спробуйте ще раз:"
 			;;
         esac
 		read -p "Натисніть Enter, щоб повернутись до головного меню..."
 	done	
 }
-	main_menu
+
+main_menu
