@@ -45,7 +45,8 @@ function check {
             printGreen "Інформація про гаманець та баланс:"
             echo ""
             lavad keys list \
-			lavad q bank balances $(lavad keys show wallet -a)
+	    lavad q bank balances $(lavad keys show wallet -a)
+     	    -y
             echo ""
         elif [[ $choice == "5" ]]; then
             echo ""
