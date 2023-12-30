@@ -23,7 +23,7 @@ function printRed {
 }	
 
 function port_menu() {
-	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/port_menu.sh)
+	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Lava/port_Lava.sh)
 }
 
 function install_Lava() {
