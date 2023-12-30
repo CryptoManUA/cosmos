@@ -50,7 +50,7 @@ function check {
             echo ""
             printGreen Ваша версію ноди:"
             echo ""
-            lavad status | jq .NodeInfo.version| tr -d '"'
+            lavad status | jq .NodeInfo.version| tr -d '"
             echo ""
         elif [[ $choice == "6" ]]; then
             echo ""
