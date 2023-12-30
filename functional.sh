@@ -36,21 +36,22 @@ function check {
             echo ""
         elif [[ $choice == "3" ]]; then
             echo ""
-            printGreen "Дізнатись верхній блок вашої ноди:"
+            printGreen "Верхній блок вашої ноди:"
             echo ""
             lavad status 2>&1 | jq .SyncInfo.latest_block_height
             echo ""
         elif [[ $choice == "4" ]]; then
+            echo ""5
+            printGreen "Інформація про гаманець та баланс:"
             echo ""
-            printGreen "Інформація про гаманець:"
-            echo ""
-            lavad keys list
+            lavad keys list \
+			lavad q bank balances $(lavad keys show wallet -a)
             echo ""
         elif [[ $choice == "5" ]]; then
             echo ""
-            printGreen "Дізнатись назву moniker:"
+            printGreen "Перевірити версію ноди:"
             echo ""
-            lavad status | jq .NodeInfo.moniker | tr -d '"'
+            lavad status | jq .NodeInfo.version| tr -d '"'
             echo ""
         elif [[ $choice == "6" ]]; then
             echo ""
