@@ -1,5 +1,5 @@
 #!/bin/bash
-
+clear
 function logo() {
     bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/logo.sh)
 }
