@@ -8,6 +8,6 @@ echo  "
                     
                     
 "
-echo  "by Asapov"
-echo  "by Fearless"
-echo  "___________________________________________________"
+echo  "                                        by Asapov"
+echo  "                                      by Fearless"
+echo  "_________________________________________________"
