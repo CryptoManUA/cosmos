@@ -41,7 +41,7 @@ function check {
             echo ""
         elif [[ $choice == "3" ]]; then
             echo ""
-            printGreen "Перевірка версії ноди:"
+            printGreen "▼Ваша версії ноди▼"
             echo ""
             lavad status | jq .NodeInfo.version| tr -d '"'
             echo ""
