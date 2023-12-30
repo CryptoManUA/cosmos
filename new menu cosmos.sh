@@ -57,8 +57,7 @@ function main_menu {
 		echo -e "\e[1m\e[35m[18]\e[0m - Стоп ноди"
 		echo -e "\e[1m\e[35m[19]\e[0m - Рестарт ноди"
 		echo -e "\e[1m\e[35m[20]\e[0m - Вийти з меню"
-		echo "Введіть номер пункту ► "
-		read choise
+		echo "Введіть номер пункту ► " choise
 		if 	[[ $choice == "1" ]]; then
             echo ""
             printGreen "↓ Встановлення ноди Lava"
