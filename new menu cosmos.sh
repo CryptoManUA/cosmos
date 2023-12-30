@@ -57,128 +57,23 @@ function main_menu {
 		echo -e "\e[1m\e[35m[18]\e[0m - Стоп ноди"
 		echo -e "\e[1m\e[35m[19]\e[0m - Рестарт ноди"
 		echo -e "\e[1m\e[35m[20]\e[0m - Вийти з меню"
-		read -p "Введіть номер пункту ► " choise
-		if 	[[ $choice == "1" ]]; then
-            echo ""
-            printGreen "↓ Встановлення ноди Lava"
-            echo ""
+		read -p "Введіть номер пункту ► " choiсe
+		case "$choice" in 
+		1)
+			printGreen "↓ Встановлення ноди Lava ↓"
+			
             install_Lava
-            echo ""
-        elif [[ $choice == "2" ]]; then
-            echo ""
-            printGreen "↓ Оновлення ноди Lava ↓"
-            echo ""
+            ;;
+		2)
+			printGreen "↓ Оновлення ноди Lava ↓"
             update_Lava
-            echo ""
-		elif [[ $choice == "3" ]]; then
+            ;;	
+		*)	
 			echo ""
-			printGreen "↓ Видалення ноди Lava ↓"
-			echo ""
-			sudo systemctl stop lavad; sudo systemctl disable lavad; sudo rm -rf $HOME/.lava; sudo rm -rf $HOME/lavad; sudo rm -rf /etc/systemd/system/lavad.service; sudo rm -rf /usr/local/bin/lavad; sudo systemctl daemon-reload		
-			echo ""
-		elif [[ $choice == "4" ]]; then
-            echo ""
-            printGreen "↓ Створення гаманця ↓"
-            echo ""
-            lavad keys add wallet
-            echo ""	
-		elif [[ $choice == "5" ]]; then
-            echo ""
-            printGreen "↓ Відновлення гаманця ↓"
-            echo ""
-			lavad keys add wallet --recover
-            echo ""	
-		elif [[ $choice == "6" ]]; then
-            echo ""
-            printGreen "↓ Створення валідатора ↓"
-            echo ""
-            create_validator
-            echo ""	
-		elif [[ $choice == "7" ]]; then
-            echo ""
-            printGreen "↓ Редагування валідатора ↓"
-            echo ""
-            edit_validator
-            echo ""
-		elif [[ $choice == "8" ]]; then
-            echo ""
-            printGreen "↓ Інформація про гаманець та баланс ↓"
-            echo ""
-            lavad keys list; lavad q bank balances $(lavad keys show wallet -a)
-            echo ""	
-		elif [[ $choice == "9" ]]; then
-            echo ""
-            printGreen "↓ Делегування токенів собі ↓"
-            echo ""
-            lavad tx staking delegate $(lavad keys show wallet --bech val -a) 1000000000000ulava --from wallet --chain-id lava-testnet-2 --gas-prices 0.1ulava --gas-adjustment 1.5 --gas auto -y 
-            echo ""	
-		elif [[ $choice == "10" ]]; then
-            echo ""
-            printGreen "↓ Виведення Вашого валідатора із в'язниці ↓"
-            echo ""
-            sudo journalctl -u lavad -f -o cat
-            echo ""	
-		elif [[ $choice == "11" ]]; then
-            echo ""
-            printGreen "↓ Інформаціця про валідатора ↓"
-            echo ""
-            lavad q staking validator $(lavad keys show wallet --bech val -a)
-            echo ""		
-		elif [[ $choice == "12" ]]; then
-            echo ""
-            printGreen "↓ Журнал логів Lava↓ Натисніть CTRL+C щоб вийти ↓"
-            echo ""
-            sudo journalctl -u lavad -f -o cat
-            echo ""	
-		elif [[ $choice == "13" ]]; then
-            echo ""
-            printGreen "↓ Статус ноди та синхронізація ↓"
-            echo ""
-            lavad status 2>&1 | jq; systemctl status lavad
-            echo ""	
-		elif [[ $choice == "14" ]]; then
-            echo ""
-            printGreen "↓ Верхній блок вашої ноди ↓"
-            echo ""
-			lavad status 2>&1 | jq .SyncInfo.latest_block_height
-            echo ""	
-		elif [[ $choice == "15" ]]; then
-            echo ""
-            printGreen "↓ Ваша версії ноди ↓"
-            echo ""
-            lavad status | jq .NodeInfo.version| tr -d '"' && sleep 3
-            echo ""
-		elif [[ $choice == "16" ]]; then
-            echo ""
-			printGreen "↓ Заміна портів ↓"
-            echo ""
-            port_menu
-            echo ""	
-		elif [[ $choice == "17" ]]; then
-            echo ""
-            print "Запуск ноди Lava"
-            echo ""
-            sudo systemctl start lavad
-            echo ""	
-		elif [[ $choice == "18" ]]; then
-            echo ""
-            print "Зупинка ноди Lava"
-            echo ""
-            sudo systemctl stop lavad
-            echo ""	
-		elif [[ $choice == "19" ]]; then
-            echo ""
-            print "Перезавантаження ноди Lava"
-            echo ""
-            sudo systemctl restart lavad
-            echo ""		
-		elif [[ $choice == "20" ]]; then
-            return
-        else
-            echo 
-			printRed "Невірний вибір."
-        fi
-    done
+			printRed "Неправильно вказаний пункт, спробуйте ще раз:"
+			;;
+        esac
+		read -p "Натисніть Enter, щоб повернутись до головного меню..."
+	done	
 }
-
-main_menu
+	main_menu
