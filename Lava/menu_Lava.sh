@@ -21,10 +21,10 @@ function port_Lava() {
 }
 
 function install_Lava() {
-	bash <(curl -s https://raw.githubusercontent.com/CPITMschool/Scripts/main/Lava/Install-Lava.sh)
+	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Lava/install_Lava.sh)
 }
 function update_Lava() {
-	bash <(curl -s https://raw.githubusercontent.com/CPITMschool/Scripts/main/Lava/Update-Lava.sh)
+	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Lava/update_Lava.sh)
 }
 	
 function main_menu {
