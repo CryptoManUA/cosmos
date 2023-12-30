@@ -4,7 +4,6 @@ function logo() {
     bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/logo.sh)
 }
 	
-
 function printGreen {
     echo -e "\e[1m\e[32m${1}\e[0m"
 }
@@ -15,15 +14,6 @@ function printRed {
 }
 function printAddition {
     echo -e "\e[4m${1}\e[0m"
-	
-}
-
- function create_validator() {
- 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/create_validator.sh)
-}
-
- function edit_validator() {
- 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/edit_validator.sh)
 }	
 
 function port_Lava() {
