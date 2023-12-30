@@ -8,7 +8,7 @@ function printGreen {
     echo -e "\e[1m\e[32m${1}\e[0m"
 	}
 	
-printGreen "▼ Встановлення ноди Lava▼" &&
+printGreen "▼ Встановлення ноди Lava ▼" &&
 read -r -p "Введіть назву вашого moniker: " NODE_MONIKER
 
 CHAIN_ID="lava-testnet-2"
