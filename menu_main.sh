@@ -17,10 +17,20 @@ function printAddition {
     echo -e "\e[4m${1}\e[0m"
 	
 }
-
  function menu_Lava() {
  	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Lava/menu_Lava.sh)
 }
+
+ function menu_Dymension() {
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Lava/menu_Dymension.sh)
+}
+ function menu_Babylon() {
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Lava/menu_Babylon.sh)
+}
+ function menu_ZetaChain() {
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Lava/menu_ZetaChain.sh)
+}
+
 
 function main_menu {
     while true; do
@@ -38,29 +48,29 @@ function main_menu {
 			printGreen "▼ Lava Network ▼" && sleep 1
 			clear
 			echo ""
-            menu_Lava
+            		menu_Lava
             ;;
 		2)	
 			printGreen "▼ Dymension ▼" && sleep 1
 			clear
 			echo ""
-            menu_Lava
+            		menu_Dymension
             ;;
 		3)	
 			printGreen "▼ Babylon ▼" && sleep 1
 			clear
 			echo ""
-            menu_Lava
+           		menu_Babylon
             ;;
 		4)	
 			printGreen "▼ ZetaChain ▼" && sleep 1
 			clear
 			echo ""
-            menu_Lava
+            		menu_ZetaChain
             ;;	
 		5)
 			echo "Ви вийшли з меню." 
-            break
+           		break
             ;;
 		*)	
 			echo
