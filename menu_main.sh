@@ -34,6 +34,7 @@ function printAddition {
 
 function main_menu {
     while true; do
+    	clear
         logo 
         printGreen "▼ Оберіть ноду в мережі Cosmos для взаїмодії ▼"
 		echo ""
