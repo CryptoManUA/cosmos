@@ -31,8 +31,9 @@ function update() {
   
   printGreen "Нода Lava успішно оновлена"
   printDelimiter
-  printGreen "В журналі логів спочатку ви можете побачити помилку Connection is closed. Але за 5-10 секунд нода розпочне синхронізацію"
-  printDelimiter && sleep 5
+  printGreen "В журналі логів спочатку ви можете побачити помилку. Але за 5-10 секунд нода розпочне синхронізацію"
+  printDelimiter
+  sleep 5
 }
 
 
