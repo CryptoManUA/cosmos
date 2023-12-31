@@ -181,14 +181,14 @@ function main_menu {
 			;;			
 		11)
             echo ""
-            printGreen "↓ Інформаціця про валідатора ↓"
+            printGreen "↓ Інформаціця про валідатора ↓ Натисніть CTRL+C щоб вийти ↓"
             echo ""
             lavad q staking validator $(lavad keys show wallet --bech val -a) && sleep 2
             echo ""
 			;;	
 		12)
             echo ""
-            printGreen "↓ Журнал логів Lava↓ Натисніть CTRL+C щоб вийти ↓"
+            printGreen "↓ Журнал логів Lava ↓ Натисніть CTRL+C щоб вийти ↓"
             echo ""
             sudo journalctl -u lavad -f -o cat && sleep 2
             echo ""
