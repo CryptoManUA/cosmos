@@ -31,7 +31,7 @@ function main_menu {
         printGreen "↓ Оберіть дію яку хочете виконати Babylon ↓"
 		echo ""
 		echo -e "\e[1m\e[35m[1]\e[0m  - Встановлення ноди Babylon"
-		echo -e "\e[1m\e[35m[2]\e[0m  - Оновлення ноди Babylon (Неактуально)"
+		echo -e "\e[1m\e[35m[2]\e[0m  - Оновлення ноди Babylon"
 		echo -e "\e[1m\e[35m[3]\e[0m  - Видалення ноди Babylon"
 		echo -e "\e[1m\e[35m[4]\e[0m  - Створення гаманця"
 		echo -e "\e[1m\e[35m[5]\e[0m  - Відновлення гаманця"
