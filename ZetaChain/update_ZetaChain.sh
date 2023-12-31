@@ -31,7 +31,8 @@ function update() {
   printGreen "Нода ZetaChain успішно оновлена"
   printDelimiter
   printGreen "В журналі логів спочатку ви можете побачити помилку. Але за 5-10 секунд нода розпочне синхронізацію" 
-  printDelimiter && sleep 5
+  printDelimiter
+  sleep 5
 }
 
 
