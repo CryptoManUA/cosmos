@@ -185,14 +185,14 @@ function main_menu {
 			;;	
 		12)
             echo ""
-            printGreen "↓ Журнал логів Dymension↓ Натисніть CTRL+C щоб вийти ↓"
+            printGreen "↓ Журнал логів Dymension ↓ Натисніть CTRL+C щоб вийти ↓"
             echo ""
             sudo journalctl -u dymd -f -o cat && sleep 2
             echo ""
 			;;
 		13)
             echo ""
-            printGreen "↓ Статус ноди та синхронізація ↓"
+            printGreen "↓ Статус ноди та синхронізація ↓ Натисніть CTRL+C щоб вийти ↓"
             echo ""
             dymd status 2>&1 | jq; systemctl status dymd && sleep 2
             echo ""	
