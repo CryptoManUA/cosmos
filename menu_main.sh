@@ -70,7 +70,8 @@ function main_menu {
             		menu_ZetaChain
             ;;	
 		5)
-			echo "Ви вийшли з меню." 
+			echo "Ви вийшли з меню." && sleep 1
+   			clear
            		break
             ;;
 		*)	
