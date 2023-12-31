@@ -22,13 +22,13 @@ function printAddition {
 }
 
  function menu_Dymension() {
- 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Lava/menu_Dymension.sh)
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Dymension/menu_Dymension.sh)
 }
  function menu_Babylon() {
- 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Lava/menu_Babylon.sh)
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Babylon/menu_Babylon.sh)
 }
  function menu_ZetaChain() {
- 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Lava/menu_ZetaChain.sh)
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/ZetaChain/menu_ZetaChain.sh)
 }
 
 
