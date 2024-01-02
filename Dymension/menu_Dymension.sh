@@ -180,7 +180,7 @@ function main_menu {
             echo ""
             printGreen "↓ Інформаціця про валідатора та приватний ключ ↓"
             echo ""
-            dymd q staking validator $(dymd keys show wallet --bech val -a) && sleep 2
+            dymd q staking validator $(dymd keys show wallet --bech val -a); cat $HOME/.lava/config/priv_validator_key.json && sleep 2
             echo ""
 			;;	
 		12)
