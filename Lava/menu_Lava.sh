@@ -168,7 +168,7 @@ function main_menu {
             echo ""
 			echo "↓ Вкажіть кількість токенів ↓:"
 			read AMOUNT
-            lavad tx staking delegate $(lavad keys show wallet --bech val -a) $AMOUNTulava --from wallet --chain-id lava-testnet-2 --gas-prices 0.1ulava --gas-adjustment 1.5 --gas auto -y && sleep 2
+            lavad tx staking delegate $(lavad keys show wallet --bech val -a) "$AMOUNT"ulava --from wallet --chain-id lava-testnet-2 --gas-prices 0.1ulava --gas-adjustment 1.5 --gas auto -y && sleep 2
             echo ""
 			;;
 		10)
