@@ -71,4 +71,4 @@ sudo systemctl daemon-reload
 sudo systemctl enable babylond
 sudo systemctl start babylond
 
-printGreen "Нода ZetaChain успішна встановлена" && sleep 2
+printGreen "Нода Babylon успішна встановлена" && sleep 2
