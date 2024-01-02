@@ -8,7 +8,7 @@ function printGreen {
     echo -e "\e[1m\e[32m${1}\e[0m"
 	}
 	
-printGreen "▼ Встановлення ноди ZetaChain ▼" &&
+printGreen "▼ Встановлення ноди Babylon ▼" && sleep 1
 read -r -p "Введіть назву вашого moniker: " NODE_MONIKER
 
 sleep 1
