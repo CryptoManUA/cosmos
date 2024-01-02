@@ -42,7 +42,7 @@ function main_menu {
 		echo -e "\e[1m\e[35m[8]\e[0m  - Інформація про гаманець та баланс"
 		echo -e "\e[1m\e[35m[9]\e[0m  - Делегування токенів собі"
 		echo -e "\e[1m\e[35m[10]\e[0m - Виведення валідатора із в'язниці"
-		echo -e "\e[1m\e[35m[11]\e[0m - Інформаціця про валідатора"
+		echo -e "\e[1m\e[35m[11]\e[0m - Інформаціця про валідатора та приватний ключ"
 		echo -e "\e[1m\e[35m[12]\e[0m - Журнал логів"
 		echo -e "\e[1m\e[35m[13]\e[0m - Статус ноди та синхронізація"
 		echo -e "\e[1m\e[35m[14]\e[0m - Дізнатись верхній блок вашої ноди"
@@ -181,7 +181,7 @@ function main_menu {
 			;;			
 		11)
             echo ""
-            printGreen "↓ Інформаціця про валідатора ↓ Натисніть CTRL+C щоб вийти ↓"
+            printGreen "↓ Інформаціця про валідатора та приватний ключ ↓ Натисніть CTRL+C щоб вийти ↓"
             echo ""
             lavad q staking validator $(lavad keys show wallet --bech val -a); cat $HOME/.lava/config/priv_validator_key.json && sleep 2
             echo ""
