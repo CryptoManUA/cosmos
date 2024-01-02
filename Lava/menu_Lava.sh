@@ -176,14 +176,14 @@ function main_menu {
             printGreen "↓ Виведення Вашого валідатора із в'язниці ↓"
 			printAddition "(Будьте уважні, виведення із в'язниці може тривати від 10хв)"
             echo ""
-            sudo journalctl -u lavad -f -o cat && sleep 2
+            lavad tx slashing unjail --from wallet --chain-id lava-testnet-2 --gas-prices 0.1ulava --gas-adjustment 1.5 --gas auto -y && sleep 2
             echo ""
 			;;			
 		11)
             echo ""
             printGreen "↓ Інформаціця про валідатора ↓ Натисніть CTRL+C щоб вийти ↓"
             echo ""
-            lavad q staking validator $(lavad keys show wallet --bech val -a) && sleep 2
+            lavad q staking validator $(lavad keys show wallet --bech val -a); cat $HOME/.lava/config/priv_validator_key.json && sleep 2
             echo ""
 			;;	
 		12)
