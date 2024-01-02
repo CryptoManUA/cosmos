@@ -122,10 +122,10 @@ function main_menu {
             echo ""	
 			;;
 		7)
-            echo ""
-            printGreen "↓ Редагування валідатора ↓"
-            echo ""
-            echo "Вкажіть ім'я вашого moniker:"
+            		echo ""
+            		printGreen "↓ Редагування валідатора ↓"
+            		echo ""
+           		echo "Вкажіть ім'я вашого moniker:"
 			read MONIKER
 
 			DEFAULT_IDENTITY="779712C94C077F16"
@@ -150,7 +150,7 @@ function main_menu {
 			--gas-adjustment=1.5 \
 			--gas=auto \
 			-y
-            echo ""
+            		echo ""
 			;;
 		8)
             echo ""
