@@ -27,6 +27,7 @@ function install_Dymension() {
 	
 function main_menu {
     while true; do
+    	clear
         logo 
         printGreen "↓ Оберіть дію яку хочете виконати Dymension ↓"
 		echo ""
