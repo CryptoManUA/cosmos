@@ -29,6 +29,7 @@ function update_Lava() {
 	
 function main_menu {
     while true; do
+    	clear
         logo 
         printGreen "↓ Оберіть дію яку хочете виконати Lava Network ↓"
 		echo ""
