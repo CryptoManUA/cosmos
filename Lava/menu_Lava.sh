@@ -210,8 +210,9 @@ function main_menu {
             echo ""	
 			;;
 		15)
+  		clear
             echo ""
-            printGreen "↓ Ваша версії ноди версія tag ↓"
+            printGreen "↓ Ваша версії ноди та версія tag ↓"
             echo ""
             lavad version; lavad status | jq .NodeInfo.version| tr -d '"' && sleep 2
             echo "" 
