@@ -45,7 +45,7 @@ echo -e "\e[1m\e[32mПеревірте роботу ноди\e[0m"
                 ;;
             	1)
 sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:27658\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:27657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:6160\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":27660\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:27657\"%" $HOME/.lava/config/config.toml &&
-sed -i.bak -e "s%^address = \"localhost:9090\"%address = \"localhost:9190\"%; s%^address = \"localhost:9091\"%address = \"localhost:9191\"%; s%^address = \"tcp://localhost:1317\"%address = \"tcp://localhost:1417\"%" $HOME/.lava/config/app.toml && 
+sed -i.bak -e "s%^address = \"localhost:9090\"%address = \"localhost:9190\"%; s%^address = \"localhost:9091\"%address = \"localhost:9191\"%; s%^address = \"tcp://localhost:1317\"%address = \"tcp://localhost:1417\"%" $HOME/.lava/config/app.toml  
 sed -i.bak -e "s%^node = \"tcp://localhost:26657\"%node = \"tcp://localhost:27657\"%" $HOME/.lava/config/client.toml            
 sudo systemctl restart lavad
 echo -e "\e[1m\e[32mПорт змінено та перезавантажено ноду\e[0m" && sleep 1
@@ -53,7 +53,7 @@ echo -e "\e[1m\e[32mПеревірте роботу ноди\e[0m"
                 ;;
             2)
 sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:28658\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:28657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:6260\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":28660\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:28657\"%" $HOME/.lava/config/config.toml &&
-sed -i.bak -e "s%^address = \"localhost:9090\"%address = \"localhost:9290\"%; s%^address = \"localhost:9091\"%address = \"localhost:9291\"%; s%^address = \"tcp://localhost:1317\"%address = \"tcp://localhost:1517\"%" $HOME/.lava/config/app.toml && 
+sed -i.bak -e "s%^address = \"localhost:9090\"%address = \"localhost:9290\"%; s%^address = \"localhost:9091\"%address = \"localhost:9291\"%; s%^address = \"tcp://localhost:1317\"%address = \"tcp://localhost:1517\"%" $HOME/.lava/config/app.toml 
 sed -i.bak -e "s%^node = \"tcp://localhost:26657\"%node = \"tcp://localhost:28657\"%" $HOME/.lava/config/client.toml            
 sudo systemctl restart lavad
 echo -e "\e[1m\e[32mПорт змінено та перезавантажено ноду\e[0m" && sleep 1
@@ -128,10 +128,11 @@ echo -e "\e[1m\e[32mПеревірте роботу ноди\e[0m"
                 break
                 ;;	
        *)	
-		echo
-		printRed "Неправильно вказаний пункт, спробуйте ще раз:"
-		;;
-        esac
-		read -p "Натисніть Enter, щоб повернутись до головного меню..."	
+	echo
+	printRed "Неправильно вказаний пункт, спробуйте ще раз:"
+					;;
+	esac
+	read -p "Натисніть Enter, щоб повернутись до головного меню..."
+	done
 }	
 	main_menu
