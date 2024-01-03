@@ -19,7 +19,7 @@ function update() {
   sudo systemctl stop cascadiad
   cascadiad config chain-id cascadia_11029-1
   
-	curl -L https://github.com/CascadiaFoundation/cascadia/releases/download/v0.1.9/cascadiad -o cascadiad
+	curl -L https://github.com/CascadiaFoundation/cascadia/releases/download/v0.2.0/cascadiad -o cascadiad
 	chmod +x cascadiad
 	sudo mv cascadiad /usr/local/bin
 	sleep 2
