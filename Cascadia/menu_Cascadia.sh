@@ -114,7 +114,7 @@ function main_menu {
 			--moniker="$MONIKER" \
 			--identity="$IDENTITY" \
 			--details="CPI™️ Ukranian Community" \
-			--chain-id=athens_7001-1 \
+			--chain-id=cascadia_11029-1 \
 			--commission-rate=0.10 \
 			--commission-max-rate=0.20 \
 			--commission-max-change-rate=0.01 \
@@ -148,7 +148,7 @@ function main_menu {
 			--new-moniker="$MONIKER" \
 			--identity="$IDENTITY" \
 			--details="CPI™️ Ukranian Community" \
-			--chain-id=athens_7001-1 \
+			--chain-id=cascadia_11029-1 \
 			--commission-rate=0.10 \
 			--from=wallet \
 			--gas-prices=0.1aCC \
@@ -213,7 +213,7 @@ function main_menu {
             echo ""
             printGreen "↓ Ваша версії ноди ↓"
             echo ""
-            cascadiad status | jq .NodeInfo.version| tr -d '"' && sleep 2
+            cascadiad version && sleep 2
             echo "" 
 			;;
 		16)
