@@ -260,7 +260,7 @@ function main_menu {
 			;;
         esac
 		read -p "Натисніть Enter, щоб повернутись до головного меню..."
-		
+		clear
 	done	
 }
 
