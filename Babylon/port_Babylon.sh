@@ -19,6 +19,7 @@ function printAddition {
 	
 function main_menu {
     while true; do
+    	clear
         logo 
         printGreen "↓ Оберіть порт для заміни ↓"
 		printAddition "(для правильної заміни портів, спочатку встановіть Default"
