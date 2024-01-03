@@ -47,13 +47,14 @@ function main_menu {
 		echo -e "\e[1m\e[35m[12]\e[0m - Журнал логів"
 		echo -e "\e[1m\e[35m[13]\e[0m - Статус ноди та синхронізація"
 		echo -e "\e[1m\e[35m[14]\e[0m - Дізнатись верхній блок вашої ноди"
-		echo -e "\e[1m\e[35m[15]\e[0m - Перевірка версії ноди"
+		echo -e "\e[1m\e[35m[15]\e[0m - Версії ноди та Версія tag"
 		echo -e "\e[1m\e[35m[16]\e[0m - Перевірка портів сервера"
-		echo -e "\e[1m\e[35m[17]\e[0m - Заміна портів"
+		echo -e "\e[1m\e[35m[17]\e[0m - Порт який займає Lava"
+		echo -e "\e[1m\e[35m[18]\e[0m - Заміна портів"
 		echo -e "\e[1m\e[35m[18]\e[0m - Старт ноди"
-		echo -e "\e[1m\e[35m[19]\e[0m - Стоп ноди"
-		echo -e "\e[1m\e[35m[20]\e[0m - Рестарт ноди"
-		echo -e "\e[1m\e[35m[21]\e[0m - Вийти з меню"
+		echo -e "\e[1m\e[35m[20]\e[0m - Стоп ноди"
+		echo -e "\e[1m\e[35m[21]\e[0m - Рестарт ноди"
+		echo -e "\e[1m\e[35m[22]\e[0m - Вийти з меню"
 		read -p "Зробіть ваш вибір, та введіть номер пункту ► " choice
         case "$choice" in 
 		1)
@@ -210,51 +211,61 @@ function main_menu {
 			;;
 		15)
             echo ""
-            printGreen "↓ Ваша версії ноди ↓"
+            printGreen "↓ Ваша версії ноди версія tag ↓"
             echo ""
-            lavad status | jq .NodeInfo.version| tr -d '"' && sleep 2
+            lavad version; lavad status | jq .NodeInfo.version| tr -d '"' && sleep 2
             echo "" 
 			;;
 		16)
-            clear
-			logo
-			echo ""
-			printGreen "↓ Відкриті порти на Вашому сервері ↓"
-			printAddition "приклад 127.0.0.1:26657 - це означає що порт зайнятий нодою"
-			printAddition "інші можна використовувати для підселення ноди в мережі Cosmos"
+           	clear
+		logo
+		echo ""
+		printGreen "↓ Відкриті порти на Вашому сервері ↓"
+		printAddition "приклад 127.0.0.1:26657 - це означає що порт зайнятий нодою"
+		printAddition "інші можна використовувати для підселення ноди в мережі Cosmos"
             echo ""
             netstat -tuln
             echo ""	
 			;;
 		17)
+            clear
+		logo
+		echo ""
+		printGreen "↓ Порт який викортистовує Lava ↓"
+            echo ""
+            lavad status | jq .NodeInfo.listen_addr
+            echo ""	
+			;;
+			
+		18)
             echo ""
 			printGreen "↓ Заміна портів ↓"
             echo ""
             port_Lava
             echo ""	
 			;;
-		18)
+		19)
             echo ""
             print "Запуск ноди Lava"
             echo ""
             sudo systemctl start lavad
             echo ""	
 			;;
-		19)
+		20)
             echo ""
             print "Зупинка ноди Lava"
             echo ""
             sudo systemctl stop lavad
             echo ""
 			;;
-		20)
+		21)
             echo ""
             print "Перезавантаження ноди Lava"
             echo ""
             sudo systemctl restart lavad
             echo ""	
 			;;
-		21)
+		22)
 			echo "Ви вийшли з меню." 
             break
             ;;
