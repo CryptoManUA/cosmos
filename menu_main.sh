@@ -31,7 +31,7 @@ function printAddition {
  	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/ZetaChain/menu_ZetaChain.sh)
 }
  function menu_Cascadia() {
- 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/ZetaChain/menu_ZetaChain.sh)
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/ZetaChain/menu_Cascadia.sh)
 }
 
 function main_menu {
