@@ -28,6 +28,7 @@ function install_Babylon() {
 function main_menu {
     while true; do
         logo 
+	clear
         printGreen "↓ Оберіть дію яку хочете виконати Babylon ↓"
 		echo ""
 		echo -e "\e[1m\e[35m[1]\e[0m  - Встановлення ноди Babylon"
