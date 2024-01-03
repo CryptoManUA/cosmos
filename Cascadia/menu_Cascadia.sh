@@ -26,7 +26,7 @@ function install_Cascadia() {
 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Cascadia/install_Cascadia.sh)
 }
 function update_Cascadia() {
-	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Cascadia/menu_Cascadia.sh)
+	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Cascadia/update_Cascadia.sh)
 }
 	
 function main_menu {
