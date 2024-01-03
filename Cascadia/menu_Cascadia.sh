@@ -170,7 +170,7 @@ function main_menu {
             echo ""
 			echo "↓ Вкажіть кількість токенів ↓:"
 			read AMOUNT
-            cascadiad tx staking delegate $(cascadiad keys show wallet --bech val -a) 1000000aCC --from wallet --chain-id cascadia_11029-1 --gas-prices 7aCC --gas-adjustment 1.5 --gas 250000 && sleep 2
+            cascadiad tx staking delegate $(cascadiad keys show wallet --bech val -a) "$AMOUNT"aCC --from wallet --chain-id cascadia_11029-1 --gas-prices 7aCC --gas-adjustment 1.5 --gas 250000 && sleep 2
             echo ""
 			;;
 		10)
