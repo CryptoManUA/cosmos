@@ -31,6 +31,7 @@ function update_ZetaChain() {
 	
 function main_menu {
     while true; do
+    	clear
         logo 
         printGreen "↓ Оберіть дію яку хочете виконати ZetaChain ↓"
 		echo ""
