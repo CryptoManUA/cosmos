@@ -30,7 +30,9 @@ function printAddition {
  function menu_ZetaChain() {
  	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/ZetaChain/menu_ZetaChain.sh)
 }
-
+ function menu_Cascadia() {
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/ZetaChain/menu_ZetaChain.sh)
+}
 
 function main_menu {
     while true; do
@@ -42,7 +44,8 @@ function main_menu {
 		echo -e "\e[1m\e[35m[2]\e[0m  - Dymension"
 		echo -e "\e[1m\e[35m[3]\e[0m  - Babylon"
 		echo -e "\e[1m\e[35m[4]\e[0m  - ZetaChain"
-		echo -e "\e[1m\e[35m[5]\e[0m  - Вийти з меню"
+  		echo -e "\e[1m\e[35m[5]\e[0m  - Cascadia"
+		echo -e "\e[1m\e[35m[6]\e[0m  - Вийти з меню"
 		read -p "Зробіть ваш вибір, та введіть номер пункту ► " choice
         case "$choice" in 
 		1)	
@@ -68,8 +71,14 @@ function main_menu {
 			clear
 			echo ""
             		menu_ZetaChain
+	      ;;
+		5)	
+			printGreen "▼ Cascadia ▼" && sleep 1
+			clear
+			echo ""
+            		menu_Cascadia
             ;;	
-		5)
+		6)
 			echo "Ви вийшли з меню." && sleep 1
    			clear
            		break
