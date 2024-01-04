@@ -251,7 +251,7 @@ function main_menu {
 			;;
 		20)
             echo ""
-            print "Перезавантаження ноди ZetaChain"
+            printGreen "Нода ZetaChain перезавантажена"
             echo ""
             sudo systemctl restart zetacored
             echo ""	
