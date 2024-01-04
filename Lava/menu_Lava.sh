@@ -232,9 +232,9 @@ function main_menu {
             clear
 		logo
 		echo ""
-		printGreen "↓ Порт який викортистовує Lava ↓"
+		printGreen "↓ Порт який викортистовує Lava в ноді та на сервері ↓"
             echo ""
-            lavad status | jq .NodeInfo.listen_addr
+            lavad status | jq .NodeInfo.listen_addr; ss -tulpn | grep lavad
             echo ""	
 			;;
 			
