@@ -27,7 +27,6 @@ function install_Dymension() {
 	
 function main_menu {
     while true; do
-    	clear
         logo 
         printGreen "↓ Оберіть дію яку хочете виконати Dymension ↓"
 		echo ""
@@ -41,17 +40,18 @@ function main_menu {
 		echo -e "\e[1m\e[35m[8]\e[0m  - Інформація про гаманець та баланс"
 		echo -e "\e[1m\e[35m[9]\e[0m  - Делегування токенів собі"
 		echo -e "\e[1m\e[35m[10]\e[0m - Виведення валідатора із в'язниці"
-		echo -e "\e[1m\e[35m[11]\e[0m - Інформаціця про валідатора та приватний ключ"
+		echo -e "\e[1m\e[35m[11]\e[0m - Інформаціця про валідатора"
 		echo -e "\e[1m\e[35m[12]\e[0m - Журнал логів"
 		echo -e "\e[1m\e[35m[13]\e[0m - Статус ноди та синхронізація"
 		echo -e "\e[1m\e[35m[14]\e[0m - Дізнатись верхній блок вашої ноди"
 		echo -e "\e[1m\e[35m[15]\e[0m - Перевірка версії ноди"
 		echo -e "\e[1m\e[35m[16]\e[0m - Перевірка портів сервера"
-		echo -e "\e[1m\e[35m[17]\e[0m - Заміна портів"
-		echo -e "\e[1m\e[35m[18]\e[0m - Старт ноди"
-		echo -e "\e[1m\e[35m[19]\e[0m - Стоп ноди"
-		echo -e "\e[1m\e[35m[20]\e[0m - Рестарт ноди"
-		echo -e "\e[1m\e[35m[21]\e[0m - Вийти з меню"
+		echo -e "\e[1m\e[35m[17]\e[0m - Порт який займає Dymension"
+		echo -e "\e[1m\e[35m[18]\e[0m - Заміна портів"
+		echo -e "\e[1m\e[35m[19]\e[0m - Старт ноди"
+		echo -e "\e[1m\e[35m[20]\e[0m - Стоп ноди"
+		echo -e "\e[1m\e[35m[21]\e[0m - Рестарт ноди"
+		echo -e "\e[1m\e[35m[22]\e[0m - Вийти з меню"
 		read -p "Зробіть ваш вибір, та введіть номер пункту ► " choice
         case "$choice" in 
 		1)
@@ -123,10 +123,10 @@ function main_menu {
             echo ""	
 			;;
 		7)
-            		echo ""
-            		printGreen "↓ Редагування валідатора ↓"
-            		echo ""
-           		echo "Вкажіть ім'я вашого moniker:"
+            echo ""
+            printGreen "↓ Редагування валідатора ↓"
+            echo ""
+            echo "Вкажіть ім'я вашого moniker:"
 			read MONIKER
 
 			DEFAULT_IDENTITY="779712C94C077F16"
@@ -151,7 +151,7 @@ function main_menu {
 			--gas-adjustment=1.5 \
 			--gas=auto \
 			-y
-            		echo ""
+            echo ""
 			;;
 		8)
             echo ""
@@ -179,9 +179,9 @@ function main_menu {
 			;;			
 		11)
             echo ""
-            printGreen "↓ Інформаціця про валідатора та приватний ключ ↓"
+            printGreen "↓ Інформаціця про валідатора ↓"
             echo ""
-            dymd q staking validator $(dymd keys show wallet --bech val -a); cat $HOME/.dymd/config/priv_validator_key.json && sleep 2
+            dymd q staking validator $(dymd keys show wallet --bech val -a) && sleep 2
             echo ""
 			;;	
 		12)
@@ -224,34 +224,43 @@ function main_menu {
             echo ""	
 			;;
 		17)
+            clear
+			logo
+			echo ""
+			printGreen "↓ Порт який викортистовує Dymension на сервері ↓"
+            echo ""
+            ss -tulpn | grep dymd
+            echo ""	
+			;;;
+		18)
             echo ""
 			printGreen "↓ Заміна портів ↓"
             echo ""
             port_Dymension
             echo ""	
 			;;
-		18)
+		19)
             echo ""
             print "↓ Запуск ноди Dymension ↓"
             echo ""
             sudo systemctl start dymd
             echo ""	
 			;;
-		19)
+		20)
             echo ""
             print "↓ Зупинка ноди Dymension ↓"
             echo ""
             sudo systemctl stop dymd
             echo ""
 			;;
-		20)
+		21)
             echo ""
             print "↓ Перезавантаження ноди Dymension ↓"
             echo ""
             sudo systemctl restart dymd
             echo ""	
 			;;
-		21)
+		22)
 			echo "Ви вийшли з меню." 
             break
             ;;
@@ -261,7 +270,7 @@ function main_menu {
 			;;
         esac
 		read -p "Натисніть Enter, щоб повернутись до головного меню..."
-		clear
+		
 	done	
 }
 
