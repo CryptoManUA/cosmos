@@ -183,7 +183,7 @@ function main_menu {
 			;;			
 		11)
             echo ""
-            printGreen "↓ Інформаціця про валідатора та приватний ключ ↓ Натисніть CTRL+C щоб вийти ↓"
+            printGreen "↓ Інформаціця про валідатора та приватний ключ ↓"
             echo ""
             lavad q staking validator $(lavad keys show wallet --bech val -a); cat $HOME/.lava/config/priv_validator_key.json && sleep 2
             echo ""
