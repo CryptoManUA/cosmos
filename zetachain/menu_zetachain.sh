@@ -17,15 +17,15 @@ function printAddition {
     echo -e "\e[4m${1}\e[0m"
 	
 }
- function service_cascadia() {
- 	bash <(curl -s )
+ function service_zetachain() {
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/zetachain/service_zetachain.sh)
 }
 
- function key-vali_cascadia() {
- 	bash <(curl -s )
+ function key-vali_zetachain() {
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/zetachain/key-vali_zetachain.sh)
 }
- function port_cascadia() {
- 	bash <(curl -s )
+ function port_zetachain() {
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/zetachain/port_zetachain.sh)
 }
 
 function main_menu {
