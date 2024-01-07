@@ -92,7 +92,7 @@ read -p "Зробіть ваш вибір, та введіть номер пун
             echo ""
 			echo "↓ Вкажіть кількість токенів ↓:"
 			read AMOUNT
-            babylond tx staking delegate $(babylond keys show wallet --bech val -a) "$AMOUNT"ubbn --from wallet --chain-id bbn-test-2 --gas-prices 0.1ubbn --gas-adjustment 1.5 --gas auto -y && sleep 2
+            babylond tx epoching delegate $(babylond keys show wallet --bech val -a) "$AMOUNT"ubbn --from wallet --chain-id bbn-test-2 --gas-prices 0.1ubbn --gas-adjustment 1.5 -y && sleep 2
             echo ""
 			;;
 		7)	
