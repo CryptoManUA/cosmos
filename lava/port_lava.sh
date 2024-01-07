@@ -239,11 +239,11 @@ echo -e "\e[1m\e[32mПеревірте роботу ноди\e[0m"
 	        ;;
 			11)
 wget -P /root/.lava/config/ -N \
-	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Lava/app.toml
+	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/lava/app.toml
 wget -P /root/.lava/config/ -N \
- 	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Lava/client.toml
+ 	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/lava/client.toml
 wget -P /root/.lava/config/ -N \
-  	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Lava/config.toml
+  	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/lava/config.toml
 sudo systemctl restart lavad
 echo -e "\e[1m\e[32mПорт замінено та перезавантажено ноду\e[0m" && sleep 1
 echo -e "\e[1m\e[32mПеревірте роботу ноди\e[0m"
