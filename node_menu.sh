@@ -18,21 +18,21 @@ function printAddition {
 	
 }
  function menu_lava() {
- 	bash <(curl -s )
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/lava/menu_lava.sh)
 }
 
  function menu_dymension() {
- 	bash <(curl -s )
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/dymension/menu_dymension.sh)
 }
  function menu_babylon() {
- 	bash <(curl -s )
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/babylon/menu_babylon.sh)
 }
  function menu_zetachain() {
- 	bash <(curl -s )
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/zetachain/menu_zetachain.sh)
 }
 
  function menu_cascadia() {
- 	bash <(curl -s )
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/cascadia/menu_cascadia.sh)
 }
 
 function main_menu {
