@@ -18,11 +18,11 @@ function printAddition {
 	
 }
  function server() {
- 	bash <(curl -s )
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/server.sh)
 }
 
  function menu_node() {
- 	bash <(curl -s )
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/node_menu.sh)
 }
  function monitor() {
  	bash <(curl -s https://raw.githubusercontent.com/asapov01/Install-Grafana/main/installmonitoring.sh)
