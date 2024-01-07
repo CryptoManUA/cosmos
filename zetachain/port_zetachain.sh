@@ -239,11 +239,11 @@ echo -e "\e[1m\e[32mПеревірте роботу ноди\e[0m"
 	        ;;
 			11)
 wget -P /root/.zetacored/config/ -N \
-	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/ZetaChain/app.toml
+	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/zetachain/app.toml
 wget -P /root/.zetacored/config/ -N \
- 	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/ZetaChain/client.toml
+ 	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/zetachain/client.toml
 wget -P /root/.zetacored/config/ -N \
-  	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/ZetaChain/config.toml
+  	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/zetachain/config.toml
 sudo systemctl restart zetacored
 echo -e "\e[1m\e[32mПорт замінено та перезавантажено ноду\e[0m" && sleep 1
 echo -e "\e[1m\e[32mПеревірте роботу ноди\e[0m"
