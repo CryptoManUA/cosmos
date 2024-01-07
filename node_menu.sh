@@ -17,66 +17,75 @@ function printAddition {
     echo -e "\e[4m${1}\e[0m"
 	
 }
- function server() {
+ function menu_lava() {
  	bash <(curl -s )
 }
 
- function menu_node() {
+ function menu_dymension() {
  	bash <(curl -s )
 }
- function monitor() {
- 	bash <(curl -s https://raw.githubusercontent.com/asapov01/Install-Grafana/main/installmonitoring.sh)
+ function menu_babylon() {
+ 	bash <(curl -s )
+}
+ function menu_zetachain() {
+ 	bash <(curl -s )
 }
 
- function backup() {
- 	bash <(curl -s https://raw.githubusercontent.com/asapov01/Backup/main/backup.sh)
+ function menu_cascadia() {
+ 	bash <(curl -s )
 }
 
 function main_menu {
     while true; do
 		clear
         logo 
-printGreen "● Головне меню:
+printGreen "● Ноди в мережі Cosmos:
 │    
 │
 │ ┌───┬──────────────────────────────────────┐
-├─┤ 1 │ Команди для сервера (термінал)       │
+├─┤ 1 │ Lava Network                         │
 │ ├───┼──────────────────────────────────────┤
-├─┤ 2 │ Взаємодія з нодами Cosmos            │
+├─┤ 2 │ Dymension                            │
 │ ├───┼──────────────────────────────────────┤
-├─┤ 3 │ Моніторинг                           │
+├─┤ 3 │ Babylon                              │
 │ ├───┼──────────────────────────────────────┤
-├─┤ 4 │ Бекап                                │
+├─┤ 4 │ ZetaChain                            │
+│ ├───┼──────────────────────────────────────┤
+├─┤ 5 │ Cascadia                             │
 │ ├───┼──────────────────────────────────────┤
 └─┤ 0 │ Вийти                                │
   └───┴──────────────────────────────────────┘"
 read -p "Зробіть ваш вибір, та введіть номер пункту ► " choice
         case "$choice" in 
 		1)	
+			printGreen "▼ Lava Network ▼" && sleep 1
 			clear
-			logo
-			printGreen "▼ Команди для сервера (Робота з сервером) ▼" && sleep 1
 			echo ""
-            server
+            menu_lava
             ;;
 		2)	
+			printGreen "▼ Dymension ▼" && sleep 1
 			clear
-			logo
-			printGreen "▼ Взаємодія з нодами Cosmos ▼" && sleep 1
 			echo ""
-            menu_node
+            menu_dymension
             ;;
 		3)	
-			printGreen "▼ Встановлення моніторонгу ▼" && sleep 1
+			printGreen "▼ Babylon ▼" && sleep 1
 			clear
 			echo ""
-            monitor
+            menu_babylon
             ;;
 		4)	
-			printGreen "▼ Створення бекапу ▼" && sleep 1
+			printGreen "▼ ZetaChain ▼" && sleep 1
 			clear
 			echo ""
-            backup
+            menu_zetachain
+            ;;
+		5)	
+			printGreen "▼ Cascadia ▼" && sleep 1
+			clear
+			echo ""
+            menu_cascadia
             ;;	
 		0)
 			echo "Ви вийшли з меню." 
