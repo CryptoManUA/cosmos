@@ -18,14 +18,14 @@ function printAddition {
 	
 }
  function service_cascadia() {
- 	bash <(curl -s )
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/cascadia/service_cascadia.sh)
 }
 
  function key-vali_cascadia() {
- 	bash <(curl -s )
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/cascadia/key-vali_cascadia.sh)
 }
  function port_cascadia() {
- 	bash <(curl -s )
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/cascadia/port_cascadia.sh)
 }
 
 function main_menu {
