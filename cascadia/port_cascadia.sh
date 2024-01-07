@@ -239,11 +239,11 @@ echo -e "\e[1m\e[32mПеревірте роботу ноди\e[0m"
 	        ;;
 			11)
 wget -P /root/.cascadiad/config/ -N \
-	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Cascadia/app.toml
+	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/cascadia/app.toml
 wget -P /root/.cascadiad/config/ -N \
- 	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Cascadia/client.toml
+ 	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/cascadia/client.toml
 wget -P /root/.cascadiad/config/ -N \
-  	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Cascadia/config.toml
+  	https://raw.githubusercontent.com/CryptoManUA/cosmos/maincCascadia/config.toml
 sudo systemctl restart cascadiad
 echo -e "\e[1m\e[32mПорт замінено та перезавантажено ноду\e[0m" && sleep 1
 echo -e "\e[1m\e[32mПеревірте роботу ноди\e[0m"
