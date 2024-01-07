@@ -231,7 +231,7 @@ function main_menu {
             echo ""
             ss -tulpn | grep dymd
             echo ""	
-			;;;
+			;;
 		18)
             echo ""
 			printGreen "↓ Заміна портів ↓"
