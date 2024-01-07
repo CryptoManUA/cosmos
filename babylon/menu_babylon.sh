@@ -18,14 +18,14 @@ function printAddition {
 	
 }
  function service_babylon() {
- 	bash <(curl -s )
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/babylon/service_babylon.sh)
 }
 
  function key-vali_babylon() {
- 	bash <(curl -s )
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/babylon/key-vali_babylon.sh)
 }
  function port_babylon() {
- 	bash <(curl -s )
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/babylon/port_babylon.sh)
 }
 
 function main_menu {
