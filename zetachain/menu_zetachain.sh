@@ -49,19 +49,19 @@ read -p "Зробіть ваш вибір, та введіть номер пун
 			printGreen "▼ Сервсні команди для ноди ▼" && sleep 1
 			clear
 			echo ""
-            service_cascadia
+            service_zetachain
             ;;
 		2)	
 			printGreen "▼ Операції з гаманецм та валідатором ▼" && sleep 1
 			clear
 			echo ""
-            key-vali_cascadia
+            key-vali_zetachain
             ;;
 		3)	
 			printGreen "▼ Вибір дій з портами ▼" && sleep 1
 			clear
 			echo ""
-            port_cascadia
+            port_zetachain
             ;;	
 		0)
 			echo "Ви вийшли з меню." 
