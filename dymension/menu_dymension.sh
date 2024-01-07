@@ -18,14 +18,14 @@ function printAddition {
 	
 }
  function service_dymension() {
- 	bash <(curl -s )
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/dymension/service_dymension.sh)
 }
 
  function key-vali_dymension() {
- 	bash <(curl -s )
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/dymension/key-vali_dymension.sh)
 }
  function port_dymension() {
- 	bash <(curl -s )
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/dymension/port_dymension.sh)
 }
 
 function main_menu {
