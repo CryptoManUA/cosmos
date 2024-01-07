@@ -236,11 +236,11 @@ echo -e "\e[1m\e[32mПеревірте роботу ноди\e[0m"
 	        ;;
 			11)
 wget -P /root/.dymension/config/ -N \
-	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Dymension/app.toml
+	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/dymension/app.toml
 wget -P /root/.dymension/config/ -N \
- 	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Dymension/client.toml
+ 	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/dymension/client.toml
 wget -P /root/.dymension/config/ -N \
-  	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/Dymension/config.toml
+  	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/dymension/config.toml
 sudo systemctl restart dymd
 echo -e "\e[1m\e[32mПорт замінено та перезавантажено ноду\e[0m" && sleep 1
 echo -e "\e[1m\e[32mПеревірте роботу ноди\e[0m"
