@@ -18,14 +18,14 @@ function printAddition {
 	
 }
  function service_lava() {
- 	bash <(curl -s )
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/lava/service_lava.sh)
 }
 
  function key-vali_lava() {
- 	bash <(curl -s )
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/lava/key-vali_lava.sh)
 }
  function port_lava() {
- 	bash <(curl -s )
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/lava/port_lava.sh)
 }
 
 function main_menu {
