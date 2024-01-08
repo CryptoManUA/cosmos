@@ -135,7 +135,7 @@ read -p "Зробіть ваш вибір, та введіть номер пун
 			--commission-max-change-rate=0.01 \
 			--min-self-delegation=1 \
 			--from=wallet \
-			--gas-prices=0.1aCC \
+			--gas-prices=7aCC \
 			--gas-adjustment=1.5 \
 			--gas=auto \
 			-y
