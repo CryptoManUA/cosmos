@@ -92,7 +92,7 @@ read -p "Зробіть ваш вибір, та введіть номер пун
             echo ""
 			echo "↓ Вкажіть кількість токенів ↓:"
 			read AMOUNT
-            cascadiad tx staking delegate $(cascadiad keys show wallet --bech val -a) "$AMOUNT"aCC --from wallet --chain-id cascadia_11029-1 --gas-prices 0.1aCC --gas-adjustment 1.5 --gas auto -y && sleep 2
+            cascadiad tx staking delegate $(cascadiad keys show wallet --bech val -a) "$AMOUNT"aCC --from wallet --chain-id cascadia_11029-1 --gas-prices 7aCC --gas-adjustment 1.5 --gas auto -y && sleep 2
             echo ""
 			;;
 		7)	
@@ -166,7 +166,7 @@ read -p "Зробіть ваш вибір, та введіть номер пун
 			--chain-id=cascadia_11029-1 \
 			--commission-rate=0.10 \
 			--from=wallet \
-			--gas-prices=0.1aCC \
+			--gas-prices=7aCC \
 			--gas-adjustment=1.5 \
 			--gas=auto \
 			-y
