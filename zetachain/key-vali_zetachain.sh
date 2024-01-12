@@ -92,7 +92,7 @@ read -p "Зробіть ваш вибір, та введіть номер пун
             echo ""
 			echo "↓ Вкажіть кількість токенів ↓:"
 			read AMOUNT
-            zetacored tx staking delegate $(zetacored keys show wallet --bech val -a) "$AMOUNT"azeta --from wallet --chain-id athens_7001-1 --gas-prices 0.1azeta --gas-adjustment 1.5 -y && sleep 2
+            zetacored tx staking delegate $(zetacored keys show wallet --bech val -a) "$AMOUNT"azeta --from wallet --chain-id athens_7001-1 --gas-prices 0.1azeta --gas-adjustment 1.5 --gas auto -y && sleep 2
             echo ""
 			;;
 		7)	
