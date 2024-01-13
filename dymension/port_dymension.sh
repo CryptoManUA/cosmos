@@ -11,7 +11,9 @@ function printGreen {
 function printRed {
     echo -e "\e[1m\e[31m${1}\e[0m"	
 }
-
+function printAddition {
+    echo -e "\e[4m${1}\e[0m"
+}
 function port_menu() {
         clear
         logo
