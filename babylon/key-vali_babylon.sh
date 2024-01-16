@@ -22,7 +22,7 @@ function main_menu {
     while true; do
 		clear
         logo 
-printGreen "● Валідатор та гаманець:
+printGreen "● Валідатор та гаманець Babylon:
 │
 │ ┌───┬──────────────────────────────────────┐
 ├─┤ 1 │ Створення гаманця                    │
