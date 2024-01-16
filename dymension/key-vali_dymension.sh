@@ -92,7 +92,7 @@ read -p "Зробіть ваш вибір, та введіть номер пун
             echo ""
 			echo "↓ Вкажіть кількість токенів ↓:"
 			read AMOUNT
-            dymd tx staking delegate $(dymd keys show wallet --bech val -a) "$AMOUNT"udym --from wallet --chain-id froopyland_100-1 --gas-prices 0.1udym --gas-adjustment 1.5 --gas auto -y && sleep 2
+            dymd tx staking delegate $(dymd keys show wallet --bech val -a) "$AMOUNT"udym --from wallet --chain-id froopyland_100-1 --gas-prices 0.1udym --gas-adjustment 1.5 -y && sleep 1
             echo ""
 			;;
 		7)	
