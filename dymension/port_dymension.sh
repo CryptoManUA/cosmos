@@ -284,7 +284,7 @@ printGreen "● Порти:
 				printAddition "приклад 127.0.0.1:26657 - це означає що порт зайнятий нодою"
 				printAddition "інші можна використовувати для підселення ноди в мережі Cosmos"
 				echo ""
-				netstat -tuln
+				netstat -tulnp
 				echo ""	
 				;;
             2)
