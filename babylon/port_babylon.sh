@@ -18,7 +18,7 @@ function printAddition {
 function port_menu() {
         clear
         logo
-printGreen "● Заміна портів:
+printGreen "● Заміна портів Babylon:
 │
 │ ┌───┬──────────────────────────────────────┐
 ├─┤ 1 │ 27657                                │
