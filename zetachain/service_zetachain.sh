@@ -21,7 +21,7 @@ function main_menu {
     while true; do
 		clear
         logo 
-printGreen "● Сервісні команди ⚙️: 
+printGreen "● Сервісні команди ⚙️ ZetaChain: 
 │
 │ ┌───┬──────────────────────────────────────┐
 ├─┤ 1 │ Старт ноди                           │
@@ -65,7 +65,7 @@ read -p "Зробіть ваш вибір, та введіть номер пун
             ;;
 		4)	
 			echo ""
-            printGreen "↓ Журнал логів Lava ↓ Натисніть CTRL+C щоб вийти ↓" && sleep 1
+            printGreen "↓ Журнал логів ZetaChain ↓ Натисніть CTRL+C щоб вийти ↓" && sleep 1
             echo ""
             sudo journalctl -u zetacored -f -o cat
             echo ""
