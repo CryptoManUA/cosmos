@@ -32,7 +32,7 @@ function main_menu {
     while true; do
 		clear
         logo 
-printGreen "● Виберіть направлення дій:
+printGreen "● Виберіть направлення дій Cascadia:
 │
 │ ┌───┬──────────────────────────────────────┐
 ├─┤ 1 │ Сервсні команди                      │
