@@ -88,6 +88,9 @@ read -p "Зробіть ваш вибір, та введіть номер пун
 			;;
 		6)	
 			echo ""
+            printGreen "↓ Ваш баланс ↓"
+	    babylond q bank balances $(babylond keys show wallet -a) | grep amount | awk '{print $3}'
+   	    echo ""
             printGreen "↓ Делегування токенів собі ↓"
             echo ""
 			echo "↓ Вкажіть кількість токенів ↓:"
