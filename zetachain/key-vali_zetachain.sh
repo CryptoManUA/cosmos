@@ -22,7 +22,7 @@ function main_menu {
     while true; do
 		clear
         logo 
-printGreen "● Валідатор та гаманець:
+printGreen "● Валідатор та гаманець ZetaChain:
 │
 │ ┌───┬──────────────────────────────────────┐
 ├─┤ 1 │ Створення гаманця                    │
@@ -87,6 +87,9 @@ read -p "Зробіть ваш вибір, та введіть номер пун
             echo ""
 			;;
 		6)	
+  			echo ""
+  	    printGreen "↓ Ваша баланс ↓"
+            zetacored q bank balances $(zetacored keys show wallet -a) | grep amount | awk '{print $3}'
 			echo ""
             printGreen "↓ Делегування токенів собі ↓"
             echo ""
