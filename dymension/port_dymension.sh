@@ -17,7 +17,7 @@ function printAddition {
 function port_menu() {
         clear
         logo
-printGreen "● Заміна портів:
+printGreen "● Заміна портів Dymension:
 │
 │ ┌───┬──────────────────────────────────────┐
 ├─┤ 1 │ 27657                                │
