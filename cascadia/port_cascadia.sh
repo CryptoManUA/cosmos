@@ -18,7 +18,7 @@ function printAddition {
 function port_menu() {
         clear
         logo
-printGreen "● Заміна портів:
+printGreen "● Заміна портів Cascadia:
 │
 │ ┌───┬──────────────────────────────────────┐
 ├─┤ 1 │ 27657                                │
