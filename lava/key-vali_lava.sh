@@ -89,7 +89,7 @@ read -p "Зробіть ваш вибір, та введіть номер пун
 		6)	
 			echo ""
             printGreen "↓ Ваш баланс ↓"
-	    lavad q bank balances $(lavad keys show wallet -a) | grep amount | awk '{print $2}'
+	    lavad q bank balances $(lavad keys show wallet -a) | grep amount | awk '{print $3}'
             echo ""
 	    printGreen "↓ Делегування токенів собі ↓"
      		echo ""
