@@ -22,7 +22,7 @@ function main_menu {
     while true; do
 		clear
         logo 
-printGreen "● Валідатор та гаманець:
+printGreen "● Валідатор та гаманець Dymension:
 │
 │ ┌───┬──────────────────────────────────────┐
 ├─┤ 1 │ Створення гаманця                    │
@@ -81,13 +81,16 @@ read -p "Зробіть ваш вибір, та введіть номер пун
 			;;
 		5)	
 			echo ""
+   	    echo ""
             printGreen "↓ Ваш баланс ↓"
-            echo ""
             dymd q bank balances $(dymd keys show wallet -a) && sleep 2
             echo ""
 			;;
 		6)	
 			echo ""
+	    printGreen "↓ Ваш баланс ↓"
+   	    dymd q bank balances $(dymd keys show wallet -a) | grep amount | awk '{print $3}'
+	    echo ""
             printGreen "↓ Делегування токенів собі ↓"
             echo ""
 			echo "↓ Вкажіть кількість токенів ↓:"
