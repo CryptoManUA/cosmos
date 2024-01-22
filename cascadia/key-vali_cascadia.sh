@@ -22,7 +22,7 @@ function main_menu {
     while true; do
 		clear
         logo 
-printGreen "● Валідатор та гаманець:
+printGreen "● Валідатор та гаманець Cascadia:
 │
 │ ┌───┬──────────────────────────────────────┐
 ├─┤ 1 │ Створення гаманця                    │
@@ -87,7 +87,9 @@ read -p "Зробіть ваш вибір, та введіть номер пун
             echo ""
 			;;
 		6)	
-			echo ""
+  			echo ""
+            printGreen "↓ Ваш баланс ↓"
+	    cascadiad q bank balances $(cascadiad keys show wallet -a) | grep amount | awk '{print $3}'
             printGreen "↓ Делегування токенів собі ↓"
             echo ""
 			echo "↓ Вкажіть кількість токенів ↓:"
