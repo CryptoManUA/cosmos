@@ -21,7 +21,7 @@ function main_menu {
     while true; do
 		clear
         logo 
-printGreen "● Сервісні команди ⚙️: 
+printGreen "● Сервісні команди ⚙️ Cascadia: 
 │
 │ ┌───┬──────────────────────────────────────┐
 ├─┤ 1 │ Старт ноди                           │
