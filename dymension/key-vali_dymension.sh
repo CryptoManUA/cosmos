@@ -179,7 +179,7 @@ read -p "Зробіть ваш вибір, та введіть номер пун
             echo ""
             printGreen "↓ Інформаціця про валідатора та приватний ключ ↓"
             echo ""
-            dymd q staking validator $(dymd keys show wallet --bech val -a); cat $HOME/.Dymension/config/priv_validator_key.json && sleep 2
+            dymd q staking validator $(dymd keys show wallet --bech val -a); cat $HOME/.dymension/config/priv_validator_key.json && sleep 2
             echo ""
 			;;	
 		0)
