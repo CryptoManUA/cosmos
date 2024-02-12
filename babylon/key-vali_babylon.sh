@@ -171,7 +171,6 @@ read -p "Зробіть ваш вибір, та введіть номер пун
 			--from=wallet \
 			--gas-prices=0.1ubbn \
 			--gas-adjustment=1.5 \
-			--gas=auto \
 			-y
             echo ""
 			;;
