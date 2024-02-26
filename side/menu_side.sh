@@ -18,14 +18,13 @@ function printAddition {
 	
 }
  function service_side() {
- 	bash <(curl -s )
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/side/service_side.sh)
 }
-
  function key-vali_side() {
- 	bash <(curl -s )
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/side/key-vali_side.sh)
 }
  function port_side() {
- 	bash <(curl -s )
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/side/port_side.sh)
 }
 
 function main_menu {
