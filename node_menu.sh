@@ -35,6 +35,10 @@ function printAddition {
  	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/cascadia/menu_cascadia.sh)
 }
 
+function menu_side() {
+ 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/side/menu_side.sh)
+}
+
 function main_menu {
     while true; do
 		clear
@@ -52,6 +56,8 @@ printGreen "● Ноди в мережі Cosmos:
 ├─┤ 4 │ ZetaChain                            │
 │ ├───┼──────────────────────────────────────┤
 ├─┤ 5 │ Cascadia                             │
+│ ├───┼──────────────────────────────────────┤
+├─┤ 6 │ Side                                 │
 │ ├───┼──────────────────────────────────────┤
 └─┤ 0 │ Вийти                                │
   └───┴──────────────────────────────────────┘"
@@ -86,6 +92,12 @@ read -p "Зробіть ваш вибір, та введіть номер пун
 			clear
 			echo ""
             menu_cascadia
+            ;;	
+	    	6)	
+			printGreen "▼ Side ▼" && sleep 1
+			clear
+			echo ""
+            menu_side
             ;;	
 		0)
 			echo "Ви вийшли з меню." 
