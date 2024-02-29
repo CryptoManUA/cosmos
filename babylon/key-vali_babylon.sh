@@ -139,7 +139,7 @@ EOF
 
     echo $'\e[32mФайл validator.json успішно створено.\e[0m'
     echo ""
-    echo $'\e[32mСкопіюйте команду створення валідатора нижче та введіть в термінал:\e[0m'
+    echo $'\e[32mНатисніть CTRL + C, скопіюйте команду створення валідатора нижче та введіть в термінал:\e[0m'
     echo ""
     echo $'\e[31mbabylond tx checkpointing create-validator $HOME/.babylond/config/validator.json \
     --chain-id="bbn-test-3" \
