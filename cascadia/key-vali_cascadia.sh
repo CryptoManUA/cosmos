@@ -114,7 +114,7 @@ read -p "Зробіть ваш вибір, та введіть номер пун
 			echo "Вкажіть ім'я вашого moniker:"
 			read MONIKER
 
-			DEFAULT_IDENTITY="779712C94C077F16"
+			DEFAULT_IDENTITY="536FCD2BE18D2DF4"
 
 			echo "Вкажіть ваш identity (натисніть Enter якщо ви не створювали):"
 			read IDENTITY_INPUT
@@ -122,7 +122,7 @@ read -p "Зробіть ваш вибір, та введіть номер пун
 			if [ -n "$IDENTITY_INPUT" ]; then
 			IDENTITY="$IDENTITY_INPUT"
 			else
-			IDENTITY="779712C94C077F16"
+			IDENTITY="536FCD2BE18D2DF4"
 			fi
 
 			cascadiad tx staking create-validator \
@@ -150,7 +150,7 @@ read -p "Зробіть ваш вибір, та введіть номер пун
             echo "Вкажіть ім'я вашого moniker:"
 			read MONIKER
 
-			DEFAULT_IDENTITY="779712C94C077F16"
+			DEFAULT_IDENTITY="536FCD2BE18D2DF4"
 
 			echo "Вкажіть ваш identity (натисніть Enter якщо ви не створювали):"
 			read IDENTITY_INPUT
