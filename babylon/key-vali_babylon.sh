@@ -127,7 +127,7 @@ then
         "pubkey": {"@type":"/cosmos.crypto.ed25519.PubKey","key":"$pubkey"},
         "amount": "100000ubbn",
         "moniker": "$moniker",
-        "identity": "779712C94C077F16",
+        "identity": "536FCD2BE18D2DF4",
         "security": "$mail",
         "details": "CPI™️ Ukrainian Community",
         "commission-rate": "0.05",
@@ -159,7 +159,7 @@ fi
             echo "Вкажіть ім'я вашого moniker:"
 			read MONIKER
 
-			DEFAULT_IDENTITY="779712C94C077F16"
+			DEFAULT_IDENTITY="536FCD2BE18D2DF4"
 
 			echo "Вкажіть ваш identity (натисніть Enter якщо ви не створювали):"
 			read IDENTITY_INPUT
@@ -167,7 +167,7 @@ fi
 			if [ -n "$IDENTITY_INPUT" ]; then
 			  IDENTITY="$IDENTITY_INPUT"
 			else
-			  IDENTITY="779712C94C077F16"
+			  IDENTITY="536FCD2BE18D2DF4"
 			fi
 
 			babylond tx staking edit-validator \
