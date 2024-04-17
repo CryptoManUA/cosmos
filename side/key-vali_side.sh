@@ -92,7 +92,7 @@ read -p "Зробіть ваш вибір, та введіть номер пун
             echo ""
 			echo "↓ Вкажіть кількість токенів ↓:"
 			read AMOUNT
-            sided tx staking delegate $(sided keys show wallet --bech val -a) "$AMOUNT"uside --from wallet --chain-id side-testnet-2 --gas-prices 0.1uside --gas-adjustment 1.5 --gas auto -y && sleep 2
+            sided tx staking delegate $(sided keys show wallet --bech val -a) "$AMOUNT"uside --from wallet --chain-id side-testnet-3 --gas-prices 0.1uside --gas-adjustment 1.5 --gas auto -y && sleep 2
             echo ""
 			;;
 		7)	
@@ -100,7 +100,7 @@ read -p "Зробіть ваш вибір, та введіть номер пун
             printGreen "↓ Виведення Вашого валідатора із в'язниці ↓"
 			printAddition "(Будьте уважні, виведення із в'язниці може тривати від 10хв)"
             echo ""
-            sided tx slashing unjail --from wallet --chain-id side-testnet-2 --gas-prices 0.1uside --gas-adjustment 1.5 --gas auto -y && sleep 2
+            sided tx slashing unjail --from wallet --chain-id side-testnet-3 --gas-prices 0.1uside --gas-adjustment 1.5 --gas auto -y && sleep 2
             echo ""
 			;;
 		8)
@@ -129,7 +129,7 @@ read -p "Зробіть ваш вибір, та введіть номер пун
 			--moniker="$MONIKER" \
 			--identity="$IDENTITY" \
 			--details="CPI™️ Ukranian Community" \
-			--chain-id=side-testnet-2 \
+			--chain-id=side-testnet-3 \
 			--commission-rate=0.10 \
 			--commission-max-rate=0.20 \
 			--commission-max-change-rate=0.01 \
@@ -163,7 +163,7 @@ read -p "Зробіть ваш вибір, та введіть номер пун
 			--new-moniker="$MONIKER" \
 			--identity="$IDENTITY" \
 			--details="CPI™️ Ukranian Community" \
-			--chain-id=side-testnet-2 \
+			--chain-id=side-testnet-3 \
 			--commission-rate=0.10 \
 			--from=wallet \
 			--gas-prices=0.1uside \
