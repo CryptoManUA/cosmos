@@ -123,7 +123,7 @@ read -p "Зробіть ваш вибір, та введіть номер пун
 			IDENTITY="536FCD2BE18D2DF4"
 			fi
 
-			sided tx checkpointing create-validator \
+			sided tx staking create-validator \
 			--amount="$AMOUNT"uside \
 			--pubkey=$(sided tendermint show-validator) \
 			--moniker="$MONIKER" \
